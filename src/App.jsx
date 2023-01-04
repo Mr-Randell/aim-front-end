@@ -2,15 +2,15 @@ import { useState } from 'react'
 // import { useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 // import {  } from "./components";
-import { Discover } from "./pages";
+import { Overview } from "./pages";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <div className="container flex items-center h-screen mx-auto">
       <Routes>
-        <Route path="/" element={ <Discover />} />
+        <Route path="/" element={ <Overview />} />
       </Routes>
     </div>
   )
