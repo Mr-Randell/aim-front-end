@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="container flex items-center h-screen mx-auto">
+    <div className="container flex-col items-center h-screen mx-auto">
       <Routes>
         <Route path="/" element={ <Overview />} />
       </Routes>
