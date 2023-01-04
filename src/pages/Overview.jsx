@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Performance } from "../components";
+import { Performance, Features } from "../components";
 
 const Discover = () => {
   return (
@@ -27,6 +27,7 @@ const Discover = () => {
           <img src="src/assets/undraw_reading.svg" alt="Educate on Maximized Efficiency"/>
       </div>
       <Performance />
+      <Features />
     </section>
   )
 }
