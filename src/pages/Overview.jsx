@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Performance, Features } from "../components";
+import { Performance, Features, Hero } from "../components";
 
 const Discover = () => {
   return (
@@ -28,6 +28,7 @@ const Discover = () => {
       </div>
       <Performance />
       <Features />
+      <Hero />
     </section>
   )
 }

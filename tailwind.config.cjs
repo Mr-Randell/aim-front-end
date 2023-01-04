@@ -10,7 +10,11 @@ module.exports = {
       lg: "976px",
       xl: "1440px",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-image': "url('/img/footer-texture.png')",
+      }
+    },
   },
   plugins: [],
 }
