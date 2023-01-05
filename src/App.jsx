@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // import { useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
+import { Signup } from './components/Signup';
 // import {  } from "./components";
 import { Discover } from "./pages";
 
@@ -9,9 +10,7 @@ function App() {
 
   return (
     <div>
-      <Routes>
-        <Route path="/" element={ <Discover />} />
-      </Routes>
+      <Signup />
     </div>
   )
 }
