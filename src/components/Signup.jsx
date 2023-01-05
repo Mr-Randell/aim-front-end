@@ -27,7 +27,7 @@ export const Signup = () => {
         <div className="container mx-auto border-2 m-5 p-3 border-spacing-4 bg-sky-500/5"> 
           <p className="text-xl text-center font-serif"> By clicking on Start Now, you accept our <u>Subscription Agreement</u> and <u>Privacy Policy</u></p>
         </div>
-        <button className="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold text-2xl py-4 w-1/6  right-0 font-serif" type="submit" >
+        <button className="float-right bg-blue-500 hover:bg-blue-900 text-white font-bold text-2xl py-4 w-1/6  right-0 font-serif" type="submit" >
           Sign Up
         </button>
       </form>
