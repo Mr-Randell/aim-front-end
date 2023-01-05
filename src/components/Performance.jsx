@@ -11,7 +11,7 @@ const Performance = () => {
         </div>
         {/* Left Items */}
         <div className="flex flex-col mb-32 space-y-12 md:w-1/4">
-          <h1 className="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
+          <h1 className="max-w-md text-4xl font-bold text-center md:hover:text-blue-800 md:text-5xl md:text-left">
             Improve performance & process time
           </h1>
           <p className="mx-w-sm text-2xl text-center md:text-left">
