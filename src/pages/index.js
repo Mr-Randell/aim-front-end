@@ -1,5 +1,5 @@
-import Discover from "./Discover";
+import Overview from "./Overview";
 
 export {
-    Discover,
+    Overview,
 };
