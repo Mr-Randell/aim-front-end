@@ -2,7 +2,7 @@ import React from "react";
 
 export const Signup = () => {
   return (
-    <div className="container mx-auto border-4  border-spacing-6 w-3/5">
+    <div className="container mx-auto border-4  border-spacing-6 w-3/4">
       <form className="flex flex-col m-10 ">
         <input type="text" className="border-0 border-b-2 p-4 placeholder:text-2xl placeholder-current font-serif m-3" placeholder="Username" />
         <input type="password" className="border-0 border-b-2 p-4 placeholder:text-2xl placeholder-current font-serif m-3" placeholder="Password"/>

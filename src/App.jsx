@@ -2,6 +2,7 @@ import { useState } from 'react'
 // import { useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import { Signup } from './components/Signup';
+import UserInventoryForm from './components/UserInventoryForm';
 // import {  } from "./components";
 import { Overview } from "./pages";
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <Overview />} />
       </Routes>
+      <UserInventoryForm />
       <Signup />
     </div>
   )
