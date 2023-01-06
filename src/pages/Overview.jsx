@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Performance, Features, Hero } from "../components";
+import { Performance, Features, Hero, Inventories } from "../components";
 
 const Discover = () => {
   return (
@@ -9,7 +9,7 @@ const Discover = () => {
         {/* Left Items */}
         <div className="flex flex-col mb-32 space-y-12 md:w-1/2">
           <h1 className="max-w-md text-4xl text-center md:text-5xl md:text-left">
-            Maximize on <span className="font-bold">Inventory Management</span> Efficiency
+            Maximize on <span className="font-bold md:hover:text-blue-800">Inventory Management</span> Efficiency
           </h1>
           <p className="mx-w-sm text-center md:text-left">
             Modern Online Inventory Management Software. AIM makes it simple for business to maintain focus on the things that actually matter by
@@ -29,6 +29,7 @@ const Discover = () => {
       <Performance />
       <Features />
       <Hero />
+      <Inventories />
     </section>
   )
 }
