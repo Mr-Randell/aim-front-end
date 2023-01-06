@@ -3,7 +3,7 @@ import React from "react";
 function Login() {
   return (
     <div
-      className="container mx-auto border-4  border-spacing-6 w-3/4 h-4/5 bg-no-repeat bg-right bg-bottom-70 bg-size-50x50"
+      className="container mx-auto border-4  border-spacing-6 bg-no-repeat bg-right bg-bottom-70 bg-size-50x50 max-w-screen-sm max-w-screen-xl xl:h-4/5"
       style={{ backgroundImage: "url('src/assets/undraw_login.svg') " }}
     >
       <form className="flex flex-col m-20 ">
