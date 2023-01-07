@@ -9,16 +9,12 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div className="container flex-col items-center h-screen mx-auto">
+      {/* <NavBar /> */}
+      {/* <div className="container flex-col items-center h-screen mx-auto"> */}
         <Routes>
           <Route path="/" element={<Overview />} />
         </Routes>
-      </div>
+      {/* </div> */}
 
     </>
   );
