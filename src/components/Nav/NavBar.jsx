@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [bg, setBg] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      return window.scrollY > 50 ? setBg(true) : setBg(false);
+    });
+  });
+
   return (
-    <nav className="bg-white mx-auto">
+      <header
+      className={`${
+        bg ? "bg-tertiary h-20" : "h-24 text-black"
+      }   fixed top-0 w-full text-white z-10 transition-all duration-300`}
+    >
+      <nav >
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
           {/* <img
@@ -65,6 +78,9 @@ const NavBar = () => {
         </ul>
       </div>
     </nav>
+
+    </header>
+    
   );
 };
 
