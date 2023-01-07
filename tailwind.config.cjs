@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#4A3AFF",
+        tertiary: "#131419",
       },
       backgroundImage: {
         "hero-image": "url('/img/footer-texture.png')",
