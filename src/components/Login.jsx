@@ -11,16 +11,16 @@ function Login() {
           <div className="md:w-1/2 mt-60">
             <input
               type="text"
-              className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current font-serif m-3 w-4/5"
+              className="border-0 border-b-2 p-3 placeholder:text-base bg-transparent placeholder-current m-3 w-4/5"
               placeholder="Username"
             />
             <input
               type="Password"
-              className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current font-serif m-3 w-4/5"
+              className="border-0 border-b-2 p-3 placeholder:text-base placeholder-current bg-transparent m-3 w-4/5"
               placeholder="Password"
             />
             <button
-              className="bg-lime-600 hover:bg-lime-900 text-white font-bold text-2xl py-4 w-4/5  left-0 font-serif m-3"
+              className="bg-lime-600 hover:bg-lime-500 text-white text-lg py-4 w-4/5  left-0 m-3"
               type="submit"
             >
               Login
