@@ -16,7 +16,7 @@ const Discover = () => {
             taking care of important Inventory logistics that drive the actual business.
           </p>
           <div className="flex justify-center md:justify-start">
-            <Link to="#" className="p-3 px-6 pt-2 text-white bg-blue-800 hover:bg-blue-700">
+            <Link to="/signup" className="p-3 px-6 pt-2 text-white bg-blue-800 hover:bg-blue-700">
               Sign Up - Its Free
             </Link>
           </div>
@@ -29,7 +29,7 @@ const Discover = () => {
       <Performance />
       <Features />
       <Hero />
-      <Inventories />
+      {/* <Inventories /> */}
     </section>
   )
 }
