@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 // import UserInventoryForm from './components/UserInventoryForm';
 import NavBar from './components/Nav/NavBar';
 // import {  } from "./components";
+import {Footer  } from "./components";
 import { Overview, Signup, Login, Dashboard } from "./pages";
 
 function App() {
@@ -23,9 +24,9 @@ function App() {
       {/* <Login /> */}
       {/* <UserInventoryForm /> */}
       {/* <Signup /> */}
+      <Footer />
     </div>
   </>
-  
 }
 
 export default App
