@@ -8,7 +8,7 @@ const Features = () => {
         {/* Left Items */}
         <div className="flex flex-col mb-32 justify-center items-center space-y-12 md:w-3/4">
           <h1 className="max-w-md text-4xl text-center md:text-5xl md:text-center">
-            <span className="font-bold">Advanced Features</span> made simple
+            <span className="font-bold md:hover:text-blue-800">Advanced Features</span> made simple
           </h1>
           <p className="mx-w-sm text-2xl text-center md:text-center">
             Use cutting-edge automation and advanced routes to manage any warehouse.
