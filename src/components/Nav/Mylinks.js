@@ -4,7 +4,7 @@ export const links = [
     submenu: true,
     sublinks: [
       {
-        Head: "USE Basics",
+        Head: "USE BASICS",
         sublink: [
           { name: "Operating Assets", link: "/" },
           { name: "Inventory", link: "/" },

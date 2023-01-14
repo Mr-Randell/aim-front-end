@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { links } from "./Mylinks";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-const NavLinks = () => {
+const NavLinks = ({ setOpen, open }) => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   return (
@@ -22,7 +22,7 @@ const NavLinks = () => {
               <span className="text-xl md:hidden inline">
                 <GoChevronUp
                   name={`${
-                    heading === link.name ? "chevron-up" : "chevron-down"
+                    heading === link.name ? "chevron-up" : "chevron-down "
                   }`}
                 />
               </span>
@@ -60,7 +60,7 @@ const NavLinks = () => {
               </div>
             )}
           </div>
-          
+
           {/* Mobile menus */}
           <div
             className={`
@@ -77,7 +77,7 @@ const NavLinks = () => {
                         ? setSubHeading(slinks.Head)
                         : setSubHeading("")
                     }
-                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
+                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center"
                   >
                     {slinks.Head}
 
@@ -97,7 +97,10 @@ const NavLinks = () => {
                     }`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                      <li
+                        className="py-3 pl-14 "
+                        onClick={() => setOpen(!open)}
+                      >
                         <Link to={slink.link}>{slink.name}</Link>
                       </li>
                     ))}

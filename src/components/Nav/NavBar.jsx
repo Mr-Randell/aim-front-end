@@ -49,31 +49,30 @@ const NavBar = () => {
             </li>
           </ul>
           <div className="md:block hidden">
-            <button className="bg-primary text-white  px-6 py-2 rounded-full">
+            <button className="bg-blue-800 hover:bg-blue-700 text-white p-3 px-6 pt-2">
               <Link to="/login">Sign In</Link>
             </button>
           </div>
 
           {/* Mobile nav */}
           <ul
-            className={`
-        md:hidden bg-white fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
-        duration-500 ${open ? "left-0" : "left-[-100%]"}
-        `}
+            className={`md:hidden bg-tertiary text-white fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4 duration-500   
+            ${open ? "left-0" : "left-[100%]"}
+            `}
           >
-            <NavLinks />
-            <li>
+            <NavLinks setOpen={setOpen} open={open} />
+            <li onClick={() => setOpen(!open)}>
               <Link to="/" className="py-7 px-3 inline-block">
                 Overview
               </Link>
             </li>
-            <li>
+            <li onClick={() => setOpen(!open)}>
               <Link to="/dashboard" className="py-7 px-3 inline-block">
                 Dashboard
               </Link>
             </li>
             <div className="py-5">
-              <button className="bg-primary text-white  px-6 py-2 rounded-full">
+              <button className="bg-blue-800 hover:bg-blue-700 text-white p-3 px-6 pt-2">
                 <Link to="/login">Sign In</Link>
               </button>
             </div>
