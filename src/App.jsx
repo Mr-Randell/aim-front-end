@@ -14,7 +14,7 @@ function App() {
 
   return <>
     <NavBar/>
-    <div className="container flex-col items-center h-screen mx-auto">
+    {/* <div className="container flex-col items-center h-screen mx-auto"> */}
       <Routes>
         <Route path="/" element={ <Overview />} />
         <Route path="/signup" element={ <Signup />} />
@@ -25,7 +25,7 @@ function App() {
       {/* <UserInventoryForm /> */}
       {/* <Signup /> */}
       <Footer />
-    </div>
+    {/* </div> */}
   </>
 }
 
