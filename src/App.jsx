@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
 import {NavBar} from "./components";
 import { Overview ,   Main} from "./pages";
-// import Main from './pages/Dashboard/Main';
 
 function App() {
   const [count, setCount] = useState(0)

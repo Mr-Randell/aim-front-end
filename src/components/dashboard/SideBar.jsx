@@ -1,17 +1,26 @@
-import React, { useState } from "react";
-import { HiMenuAlt3 } from "react-icons/hi";
-import { Link } from "react-router-dom";
-import { AiOutlineForm } from "react-icons/ai";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import { MdDashboard } from "react-icons/md";
+import { AiOutlineForm, AiFillAlipayCircle } from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { GiBassetHoundHead } from "react-icons/gi";
-import { MdDashboard } from "react-icons/md";
-import { useTheme } from "@mui/material";
+import { useStateContext } from "../../contexts/ContextProvider";
 import { tokens } from "../../pages/Dashboard/thems";
+import { useTheme } from "@mui/material";
 
-function SideBar() {
+const SideBar = () => {
+  // theme
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  // 
+  const { activeMenu, setActiveMenu, screenSize, currentColor } =
+    useStateContext();
 
+  const handleCloseSideBar = () => {
+    if (activeMenu !== undefined && screenSize <= 900) {
+      setActiveMenu(false);
+    }
+  };
   const menus = [
     {
       title: "Dashboard",
@@ -46,75 +55,64 @@ function SideBar() {
     },
   ];
 
-  const [open, setOpen] = useState(false);
+  const activeLink =
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 border-blue-600 border-r-2 shadow-lg border-b-2 text-white text-md m-2";
+  const normalLink =
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2 ";
 
   return (
-    <>
-      <section className="flex gap-6 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto ">
-        <div
-          // className={`bg-${colors.primary[100]} min-h-screen  ${
-          //   open ? "w-72" : "w-16"
-          // } duration-500 text-gray-100 px-4`}
-          className={`bg-blue-300 min-h-screen  ${
-            open ? "w-72" : "w-16"
-          } duration-500 text-gray-100 px-4`}
-        >
-          <div className="py-3 flex justify-end">
-            <HiMenuAlt3
-              size={26}
-              className="cursor-pointer"
-              onClick={() => setOpen(!open)}
-            />
+    <div
+      className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 "
+    >
+      {activeMenu && (
+        <>
+          <div className="flex justify-between items-center">
+            <Link
+              to="/"
+              onClick={handleCloseSideBar}
+              style={{
+                color: colors.grey[100],
+              }}
+              className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900"
+            >
+              <AiFillAlipayCircle /> <span>AIM</span>
+            </Link>
           </div>
-          <div className="mt-4 flex flex-col gap-4 relative mb-8">
-            {menus?.map((menu) => (
-              <div key={menu.title}>
+          <div className="mt-10">
+            {menus.map((item) => (
+              <div key={item.title}>
                 <p
-                  className={` text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase whitespace-pre duration-500 ${
-                    !open && "opacity-0 translate-x-28 overflow-hidden"
-                  }`}
-                  style={{ m: "15px 0 5px 20px" }}
+                  className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase"
+                  style={{
+                    color: colors.grey[100],
+                  }}
                 >
-                  {menu.title}
+                  {item.title}
                 </p>
-                {menu.links.map((link, i) => (
-                  <Link
+                {item.links.map((link) => (
+                  <NavLink
                     to={`/${link.name}`}
-                    key={i}
-                    className={` ${
-                      menu?.margin && "mt-5"
-                    } group flex items-center text-sm  gap-3.5 font-medium p-4 pl-2 hover:bg-teal-500 rounded-md`}
+                    key={link.name}
+                    onClick={handleCloseSideBar}
+                    style={{
+                      color: colors.grey[100],
+                    }}
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
-                    <div>{link.icon}</div>
-                    <h2
-                      style={{
-                        transitionDelay: `${i + 3}00ms`,
-                      }}
-                      className={`whitespace-pre duration-500 capitalize ${
-                        !open && "opacity-0 translate-x-28 overflow-hidden"
-                      }`}
-                    >
-                      {link.name}
-                    </h2>
-                    <h2
-                      className={`${
-                        open && "hidden"
-                      } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
-                    >
-                      {link.name}
-                    </h2>
-                  </Link>
+                    {link.icon}
+                    <span className="capitalize ">{link.name}</span>
+                  </NavLink>
                 ))}
               </div>
             ))}
           </div>
-        </div>
-      </section>
-    </>
+        </>
+      )}
+    </div>
   );
-    
-    
-  
-}
+};
 
 export default SideBar;
+
