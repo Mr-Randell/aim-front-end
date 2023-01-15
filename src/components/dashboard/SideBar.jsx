@@ -5,8 +5,12 @@ import { AiOutlineForm } from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { GiBassetHoundHead } from "react-icons/gi";
 import { MdDashboard } from "react-icons/md";
+import { useTheme } from "@mui/material";
+import { tokens } from "../../pages/Dashboard/thems";
 
 function SideBar() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
 
   const menus = [
     {
@@ -48,6 +52,9 @@ function SideBar() {
     <>
       <section className="flex gap-6 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto ">
         <div
+          // className={`bg-${colors.primary[100]} min-h-screen  ${
+          //   open ? "w-72" : "w-16"
+          // } duration-500 text-gray-100 px-4`}
           className={`bg-blue-300 min-h-screen  ${
             open ? "w-72" : "w-16"
           } duration-500 text-gray-100 px-4`}
@@ -61,9 +68,7 @@ function SideBar() {
           </div>
           <div className="mt-4 flex flex-col gap-4 relative mb-8">
             {menus?.map((menu) => (
-              <div
-                key={menu.title}
-              >
+              <div key={menu.title}>
                 <p
                   className={` text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase whitespace-pre duration-500 ${
                     !open && "opacity-0 translate-x-28 overflow-hidden"

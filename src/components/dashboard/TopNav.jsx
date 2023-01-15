@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from "react";
 import { AiOutlineMenu } from 'react-icons/ai';
-import { FiShoppingCart } from 'react-icons/fi';
 import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification3Line } from 'react-icons/ri';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import {
+  MdKeyboardArrowDown,
+  MdOutlineLightMode,
+  MdOutlineDarkMode,
+} from "react-icons/md";
 import avatar from "../../assets/myself.jpeg";
-// import { useTheme } from "@mui/material";
-// import { ColorModeContext, tokens } from "../../pages/Dashboard/thems";
-
-
-// import { Cart, Chat, Notification, UserProfile } from '.';
+import { useTheme } from "@mui/material";
+import { ColorModeContext} from "../../pages/Dashboard/thems";
 import { useStateContext } from '../../contexts/ContextProvider';
 
 const NavButton = ({ customFunc, icon, color, dotColor }) => (
@@ -29,8 +29,8 @@ const NavButton = ({ customFunc, icon, color, dotColor }) => (
 
 const TopNav = () => {
   // dark and light mode
-  // const theme = useTheme();
-  // const colorMode = useContext(ColorModeContext);
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
   const {
     currentColor,
     activeMenu,
@@ -71,16 +71,16 @@ const TopNav = () => {
       />
       <div className="flex">
         <NavButton
-          title="Cart"
-          customFunc={() => handleClick("cart")}
+          customFunc={colorMode.toggleColorMode}
           color={currentColor}
-          // icon={
-          //   theme.palette.mode === "dark" ? (
-          //     <MdOutlineDarkMode />
-          //   ) : (
-          //     <MdOutlineLightMode />
-          //   )
-          // }
+          title="Mode"
+          icon={
+            theme.palette.mode === "dark" ? (
+              <MdOutlineDarkMode />
+            ) : (
+              <MdOutlineLightMode />
+            )
+          }
         />
         <NavButton
           title="Chat"
