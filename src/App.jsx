@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 // import UserInventoryForm from './components/UserInventoryForm';
 import NavBar from './components/Nav/NavBar';
 // import {  } from "./components";
+import {Footer  } from "./components";
 import { Overview, Signup, Login, Dashboard } from "./pages";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
 
   return <>
     <NavBar/>
-    <div className="container flex-col items-center h-screen mx-auto">
+    {/* <div className="container flex-col items-center h-screen mx-auto"> */}
       <Routes>
         <Route path="/" element={ <Overview />} />
         <Route path="/signup" element={ <Signup />} />
@@ -23,9 +24,9 @@ function App() {
       {/* <Login /> */}
       {/* <UserInventoryForm /> */}
       {/* <Signup /> */}
-    </div>
+      <Footer />
+    {/* </div> */}
   </>
-  
 }
 
 export default App
