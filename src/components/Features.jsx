@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Features = () => {
   return (
     <section id="features">
-      <div className="container flex h-screen justify-center items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+      <div className="container flex h-screen justify-center items-center px-6 mx-auto space-y-0 md:space-y-0 md:flex-row">
         {/* Left Items */}
         <div className="flex flex-col mb-32 justify-center items-center space-y-12 md:w-3/4">
           <h1 className="max-w-md text-4xl text-center md:text-5xl md:text-center">
