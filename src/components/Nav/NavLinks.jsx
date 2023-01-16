@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./Mylinks";
-import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 const NavLinks = ({ setOpen, open }) => {
   const [heading, setHeading] = useState("");

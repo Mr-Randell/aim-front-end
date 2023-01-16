@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { AiFillAlipayCircle } from "react-icons/ai";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -23,11 +22,9 @@ const NavBar = () => {
       <nav>
         <div className="flex items-center font-medium justify-around">
           <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-            <div
-              className="items-center gap-2 flex font-semibold text-3xl md:cursor-pointer h-9 "
-            >
-              <AiFillAlipayCircle /> <span>AIM</span>
-            </div>
+            <h1 className="md:cursor-pointer h-9 font-semibold text-3xl">
+              AIM
+            </h1>
             <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
               <HiOutlineMenuAlt3 name={`${open ? "close" : "menu"}`} />
             </div>
