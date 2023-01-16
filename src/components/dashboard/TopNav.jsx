@@ -70,7 +70,7 @@ const TopNav = () => {
         icon={<AiOutlineMenu />}
       />
       <div className="flex">
-        <NavButton
+        {/* <NavButton
           customFunc={colorMode.toggleColorMode}
           color={currentColor}
           title="Mode"
@@ -95,7 +95,7 @@ const TopNav = () => {
           customFunc={() => handleClick("notification")}
           color={currentColor}
           icon={<RiNotification3Line />}
-        />
+        /> */}
         <div
           className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
           onClick={() => handleClick("userProfile")}

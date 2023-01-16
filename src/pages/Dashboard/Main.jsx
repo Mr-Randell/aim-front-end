@@ -36,8 +36,10 @@ function Main() {
                   : "w-full min-h-screen flex-2 "
               }
             >
-              <div className="fixed md:static  navbar w-full ">
+              <div className="fixed md:static navbar w-full ">
                 <TopNav />
+              </div>
+              <div>
                 <div>
                   <Routes>
                     dashboard
