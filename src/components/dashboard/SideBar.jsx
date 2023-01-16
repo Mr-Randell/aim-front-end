@@ -56,17 +56,15 @@ const SideBar = () => {
   ];
 
   const activeLink =
-    "flex items-center gap-5 pl-4 pt-3 pb-2.5 border-blue-600 border-r-2 shadow-lg border-b-2 text-white text-md m-2";
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 border-blue-600  text-white text-md m-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 md:hover:shadow-lg md:hover:shadow-blue-500/50 duration-300 ...";
   const normalLink =
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2 ";
 
   return (
-    <div
-      className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 "
-    >
+    <div className="h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto bg-slate-100 pb-10 ">
       {activeMenu && (
         <>
-          <div className="flex justify-between items-center">
+          <div className="mt-12">
             <Link
               to="/"
               onClick={handleCloseSideBar}
@@ -75,10 +73,8 @@ const SideBar = () => {
               }}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900"
             >
-              <AiFillAlipayCircle /> <span>AIM</span>
+              <span>AIM</span>
             </Link>
-          </div>
-          <div className="mt-10">
             {menus.map((item) => (
               <div key={item.title}>
                 <p
@@ -95,14 +91,16 @@ const SideBar = () => {
                     key={link.name}
                     onClick={handleCloseSideBar}
                     style={{
-                      color: colors.grey[100],
+                      color: colors.primary[500],
                     }}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
                   >
                     {link.icon}
-                    <span className="capitalize ">{link.name}</span>
+                    <span className="capitalize ">
+                      {link.name}
+                    </span>
                   </NavLink>
                 ))}
               </div>

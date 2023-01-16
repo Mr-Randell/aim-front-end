@@ -1,12 +1,6 @@
 import React, { useEffect, useContext } from "react";
-import { AiOutlineMenu } from 'react-icons/ai';
-import { BsChatLeft } from 'react-icons/bs';
-import { RiNotification3Line } from 'react-icons/ri';
-import {
-  MdKeyboardArrowDown,
-  MdOutlineLightMode,
-  MdOutlineDarkMode,
-} from "react-icons/md";
+import {MdKeyboardArrowDown} from "react-icons/md";
+import {HiOutlineMenuAlt3} from "react-icons/hi"
 import avatar from "../../assets/myself.jpeg";
 import { useTheme } from "@mui/material";
 import { ColorModeContext} from "../../pages/Dashboard/thems";
@@ -29,8 +23,8 @@ const NavButton = ({ customFunc, icon, color, dotColor }) => (
 
 const TopNav = () => {
   // dark and light mode
-  const theme = useTheme();
-  const colorMode = useContext(ColorModeContext);
+  // const theme = useTheme();
+  // const colorMode = useContext(ColorModeContext);
   const {
     currentColor,
     activeMenu,
@@ -67,35 +61,9 @@ const TopNav = () => {
         title="Menu"
         customFunc={handleActiveMenu}
         color={currentColor}
-        icon={<AiOutlineMenu />}
+        icon={<HiOutlineMenuAlt3 />}
       />
       <div className="flex">
-        {/* <NavButton
-          customFunc={colorMode.toggleColorMode}
-          color={currentColor}
-          title="Mode"
-          icon={
-            theme.palette.mode === "dark" ? (
-              <MdOutlineDarkMode />
-            ) : (
-              <MdOutlineLightMode />
-            )
-          }
-        />
-        <NavButton
-          title="Chat"
-          dotColor="#03C9D7"
-          customFunc={() => handleClick("chat")}
-          color={currentColor}
-          icon={<BsChatLeft />}
-        />
-        <NavButton
-          title="Notification"
-          dotColor="rgb(254, 201, 15)"
-          customFunc={() => handleClick("notification")}
-          color={currentColor}
-          icon={<RiNotification3Line />}
-        /> */}
         <div
           className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
           onClick={() => handleClick("userProfile")}
@@ -112,10 +80,7 @@ const TopNav = () => {
           <MdKeyboardArrowDown className="text-gray-400 text-14" />
         </div>
 
-        {/* {isClicked.cart && (<Cart />)}
-        {isClicked.chat && (<Chat />)}
-        {isClicked.notification && (<Notification />)}
-        {isClicked.userProfile && (<UserProfile />)} */}
+        {/* {isClicked.userProfile && (<UserProfile />)}  */}
       </div>
     </div>
   );
