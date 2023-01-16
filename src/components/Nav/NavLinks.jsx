@@ -59,12 +59,14 @@ const NavLinks = ({ setOpen, open }) => {
               </div>
             )}
           </div>
+
           {/* Mobile menus */}
           <div
             className={`
             ${heading === link.name ? "md:hidden" : "hidden"}
           `}
           >
+            
             {/* sublinks */}
             {link.sublinks.map((slinks) => (
               <div>

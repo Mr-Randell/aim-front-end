@@ -17,7 +17,7 @@ const NavBar = () => {
     <header
       className={`${
         bg ? "bg-tertiary h-20" : "h-24 text-black"
-      }   fixed top-0 w-full text-white z-10 transition-all duration-300`}
+      } fixed top-0 w-full text-white z-10 transition-all duration-300`}
     >
       <nav>
         <div className="flex items-center font-medium justify-around">
