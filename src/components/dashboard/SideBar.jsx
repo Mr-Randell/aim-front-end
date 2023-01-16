@@ -1,20 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
-import { AiOutlineForm, AiFillAlipayCircle } from "react-icons/ai";
+import { AiOutlineForm} from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { GiBassetHoundHead } from "react-icons/gi";
 import { useStateContext } from "../../contexts/ContextProvider";
-import { tokens } from "../../pages/Dashboard/thems";
-import { useTheme } from "@mui/material";
 
 const SideBar = () => {
-  // theme
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-  // 
-  const { activeMenu, setActiveMenu, screenSize, currentColor } =
-    useStateContext();
+  const { activeMenu, setActiveMenu, screenSize} = useStateContext();
 
   const handleCloseSideBar = () => {
     if (activeMenu !== undefined && screenSize <= 900) {
@@ -68,21 +61,13 @@ const SideBar = () => {
             <Link
               to="/"
               onClick={handleCloseSideBar}
-              style={{
-                color: colors.grey[100],
-              }}
-              className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900"
+              className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight  text-slate-900"
             >
               <span>AIM</span>
             </Link>
             {menus.map((item) => (
               <div key={item.title}>
-                <p
-                  className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase"
-                  style={{
-                    color: colors.grey[100],
-                  }}
-                >
+                <p className="text-gray-600  m-3 mt-4 uppercase">
                   {item.title}
                 </p>
                 {item.links.map((link) => (
@@ -91,16 +76,14 @@ const SideBar = () => {
                     key={link.name}
                     onClick={handleCloseSideBar}
                     style={{
-                      color: colors.primary[500],
+                      color: "black",
                     }}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }
                   >
                     {link.icon}
-                    <span className="capitalize ">
-                      {link.name}
-                    </span>
+                    <span className="capitalize text-black">{link.name}</span>
                   </NavLink>
                 ))}
               </div>

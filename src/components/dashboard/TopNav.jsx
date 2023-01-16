@@ -2,8 +2,6 @@ import React, { useEffect, useContext } from "react";
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {HiOutlineMenuAlt3} from "react-icons/hi"
 import avatar from "../../assets/myself.jpeg";
-import { useTheme } from "@mui/material";
-import { ColorModeContext} from "../../pages/Dashboard/thems";
 import { useStateContext } from '../../contexts/ContextProvider';
 
 const NavButton = ({ customFunc, icon, color, dotColor }) => (
@@ -22,9 +20,6 @@ const NavButton = ({ customFunc, icon, color, dotColor }) => (
 );
 
 const TopNav = () => {
-  // dark and light mode
-  // const theme = useTheme();
-  // const colorMode = useContext(ColorModeContext);
   const {
     currentColor,
     activeMenu,

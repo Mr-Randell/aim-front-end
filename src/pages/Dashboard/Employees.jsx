@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/dashboard/Header';
 import {employeesData} from "../../data"
 import { Reorder } from "framer-motion";
