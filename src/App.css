@@ -40,6 +40,20 @@
   color: #888;
 }
 
+/*  */
+.sidebar {
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+}
+.nav-item,
+.navbar {
+  z-index: 10000;
+}
+@media  screen and (max-width:800px) {
+  .sidebar{
+    z-index: 10000000;
+  }
+}
+/*  */
 /* input[type="text"]:focus ~ .input-text{
   @apply bg-white transform -translate-y-9 -translate-x-2 scale-75;
 } */
