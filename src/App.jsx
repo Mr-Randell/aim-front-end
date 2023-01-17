@@ -1,12 +1,11 @@
 import { useState } from 'react'
 // import { useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
+import {NavBar} from "./components";
 // import Login from './components/Login';
 // import { Signup } from './components/Signup';
 // import UserInventoryForm from './components/UserInventoryForm';
-import NavBar from './components/Nav/NavBar';
-// import {  } from "./components";
-import {Footer  } from "./components";
+import { Footer } from "./components";
 import { Overview, Signup, Login, Dashboard } from "./pages";
 
 function App() {
