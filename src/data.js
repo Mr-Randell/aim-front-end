@@ -590,7 +590,7 @@ export const employeesData = [
 // assests data
 export const ordersData = [
   {
-    OrderID: 893486,
+    OrderID: 1,
     CustomerName: "Anika Viseer",
     ReleasedYear: "01/02/2021",
     OrderItems: "Night Lamp",
@@ -604,7 +604,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 94757,
+    OrderID: 2,
     CustomerName: "Omar Darobe",
     ReleasedYear: "01/02/2021",
     OrderItems: "Makeup Lancome Rouge",
@@ -618,7 +618,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 944895,
+    OrderID: 3,
     CustomerName: "Lulia albu",
     ReleasedYear: "01/02/2021",
     OrderItems: "Skincare",
@@ -632,7 +632,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 4,
     CustomerName: "Penjani",
     ReleasedYear: "01/02/2021",
     OrderItems: "Headphone",
@@ -646,7 +646,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 5,
     CustomerName: "Jie Yan",
     ReleasedYear: "01/02/2021",
     OrderItems: "Shoes",
@@ -661,7 +661,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 874534,
+    OrderID: 6,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -676,7 +676,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 38489,
+    OrderID: 7,
     CustomerName: "Miron",
     ReleasedYear: "01/02/2021",
     OrderItems: "Ice Cream",
@@ -691,7 +691,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 24546,
+    OrderID: 8,
     CustomerName: "Frank",
     ReleasedYear: "01/02/2021",
     OrderItems: "Pan Cake",
@@ -706,7 +706,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
-    OrderID: 874534,
+    OrderID: 9,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -721,7 +721,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 10248,
+    OrderID: 10,
     CustomerName: "Vinet",
     ReleasedYear: "01/02/2021",
     OrderItems: "Fresh Tomato",
@@ -735,7 +735,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
-    OrderID: 345653,
+    OrderID: 11,
     CustomerName: "Carson Darrin",
     ReleasedYear: "01/02/2021",
     OrderItems: "Butter Scotch",
@@ -749,7 +749,7 @@ export const ordersData = [
     ProductImage: product5,
   },
   {
-    OrderID: 390457,
+    OrderID: 12,
     CustomerName: "Fran Perez",
     ReleasedYear: "01/02/2021",
     OrderItems: "Candy Gucci",
@@ -763,7 +763,7 @@ export const ordersData = [
     ProductImage: product7,
   },
   {
-    OrderID: 893486,
+    OrderID: 13,
     CustomerName: "Anika Viseer",
     ReleasedYear: "01/02/2021",
     OrderItems: "Night Lamp",
@@ -777,7 +777,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
-    OrderID: 748975,
+    OrderID: 14,
     CustomerName: "Miron Vitold",
     ReleasedYear: "01/02/2021",
     OrderItems: "Healthcare Erbology",
@@ -791,7 +791,7 @@ export const ordersData = [
     ProductImage: product1,
   },
   {
-    OrderID: 94757,
+    OrderID: 15,
     CustomerName: "Omar Darobe",
     ReleasedYear: "01/02/2021",
     OrderItems: "Makeup Lancome Rouge",
@@ -805,7 +805,7 @@ export const ordersData = [
     ProductImage: product2,
   },
   {
-    OrderID: 944895,
+    OrderID: 16,
     CustomerName: "Lulia albu",
     ReleasedYear: "01/02/2021",
     OrderItems: "Skincare",
@@ -819,7 +819,7 @@ export const ordersData = [
     ProductImage: product3,
   },
   {
-    OrderID: 845954,
+    OrderID: 17,
     CustomerName: "Penjani",
     ReleasedYear: "01/02/2021",
     OrderItems: "Headphone",
@@ -833,7 +833,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
-    OrderID: 845954,
+    OrderID: 18,
     CustomerName: "Jie Yan",
     ReleasedYear: "01/02/2021",
     OrderItems: "Shoes",
@@ -848,7 +848,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
-    OrderID: 874534,
+    OrderID: 19,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -863,7 +863,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 38489,
+    OrderID: 20,
     CustomerName: "Miron",
     ReleasedYear: "01/02/2021",
     OrderItems: "Ice Cream",
@@ -878,7 +878,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
-    OrderID: 24546,
+    OrderID: 21,
     CustomerName: "Frank",
     ReleasedYear: "01/02/2021",
     OrderItems: "Pan Cake",
@@ -893,7 +893,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
-    OrderID: 874534,
+    OrderID: 22,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -908,7 +908,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 10248,
+    OrderID: 23,
     CustomerName: "Vinet",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
@@ -922,7 +922,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
-    OrderID: 345653,
+    OrderID: 24,
     CustomerName: "Carson Darrin",
     ReleasedYear: "01/02/2021",
     OrderItems: "Butter Scotch",
@@ -936,7 +936,7 @@ export const ordersData = [
     ProductImage: product5,
   },
   {
-    OrderID: 390457,
+    OrderID: 25,
     CustomerName: "Fran Perez",
     ReleasedYear: "01/02/2021",
     OrderItems: "Candy Gucci",
@@ -950,7 +950,7 @@ export const ordersData = [
     ProductImage: product7,
   },
   {
-    OrderID: 893486,
+    OrderID: 26,
     CustomerName: "Anika Viseer",
     ReleasedYear: "01/02/2021",
     OrderItems: "Night Lamp",
@@ -964,7 +964,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
-    OrderID: 748975,
+    OrderID: 27,
     CustomerName: "Miron Vitold",
     ReleasedYear: "01/02/2021",
     OrderItems: "Healthcare Erbology",
@@ -978,7 +978,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 94757,
+    OrderID: 28,
     CustomerName: "Omar Darobe",
     ReleasedYear: "01/02/2021",
     OrderItems: "Makeup Lancome Rouge",
@@ -992,7 +992,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 944895,
+    OrderID: 29,
     CustomerName: "Lulia albu",
     ReleasedYear: "01/02/2021",
     Description:
@@ -1006,7 +1006,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 30,
     CustomerName: "Penjani",
     ReleasedYear: "01/02/2021",
     OrderItems: "Headphone",
@@ -1020,7 +1020,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 31,
     CustomerName: "Jie Yan",
     ReleasedYear: "01/02/2021",
     OrderItems: "Shoes",
@@ -1035,7 +1035,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
-    OrderID: 874534,
+    OrderID: 32,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -1050,7 +1050,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 38489,
+    OrderID: 33,
     CustomerName: "Miron",
     ReleasedYear: "01/02/2021",
     OrderItems: "Ice Cream",
@@ -1065,7 +1065,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
-    OrderID: 24546,
+    OrderID: 34,
     CustomerName: "Frank",
     ReleasedYear: "01/02/2021",
     OrderItems: "Pan Cake",
@@ -1080,7 +1080,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
-    OrderID: 874534,
+    OrderID: 35,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -1095,7 +1095,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 10248,
+    OrderID: 36,
     CustomerName: "Vinet",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
@@ -1109,7 +1109,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
-    OrderID: 345653,
+    OrderID: 37,
     CustomerName: "Carson Darrin",
     ReleasedYear: "01/02/2021",
     Description:
@@ -1123,7 +1123,7 @@ export const ordersData = [
     ProductImage: product5,
   },
   {
-    OrderID: 390457,
+    OrderID: 38,
     CustomerName: "Fran Perez",
     ReleasedYear: "01/02/2021",
     Description:
@@ -1137,7 +1137,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 893486,
+    OrderID: 39,
     CustomerName: "Anika Viseer",
     ReleasedYear: "01/02/2021",
     Description:
@@ -1151,7 +1151,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 748975,
+    OrderID: 40,
     CustomerName: "Miron Vitold",
     ReleasedYear: "01/02/2021",
     OrderItems: "Healthcare Erbology",
@@ -1165,7 +1165,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 94757,
+    OrderID: 41,
     CustomerName: "Omar Darobe",
     ReleasedYear: "01/02/2021",
     OrderItems: "Makeup Lancome Rouge",
@@ -1179,7 +1179,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 944895,
+    OrderID: 42,
     CustomerName: "Lulia albu",
     ReleasedYear: "01/02/2021",
     OrderItems: "Skincare",
@@ -1193,7 +1193,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 43,
     CustomerName: "Penjani",
     ReleasedYear: "01/02/2021",
     OrderItems: "Headphone",
@@ -1207,7 +1207,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 44,
     CustomerName: "Jie Yan",
     ReleasedYear: "01/02/2021",
     OrderItems: "Shoes",
@@ -1222,7 +1222,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
-    OrderID: 874534,
+    OrderID: 45,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -1237,7 +1237,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 38489,
+    OrderID: 46,
     CustomerName: "Miron",
     ReleasedYear: "01/02/2021",
     OrderItems: "Ice Cream",
@@ -1252,7 +1252,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
-    OrderID: 24546,
+    OrderID: 47,
     CustomerName: "Frank",
     ReleasedYear: "01/02/2021",
     OrderItems: "Pan Cake",
@@ -1267,7 +1267,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
-    OrderID: 874534,
+    OrderID: 48,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -1282,7 +1282,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 10248,
+    OrderID: 49,
     CustomerName: "Vinet",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
@@ -1296,7 +1296,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
-    OrderID: 345653,
+    OrderID: 50,
     CustomerName: "Carson Darrin",
     ReleasedYear: "01/02/2021",
     OrderItems: "Butter Scotch",
@@ -1310,7 +1310,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 390457,
+    OrderID: 51,
     CustomerName: "Fran Perez",
     ReleasedYear: "01/02/2021",
     OrderItems: "Candy Gucci",
@@ -1324,7 +1324,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 893486,
+    OrderID: 52,
     CustomerName: "Anika Viseer",
     ReleasedYear: "01/02/2021",
     OrderItems: "Night Lamp",
@@ -1338,7 +1338,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 748975,
+    OrderID: 53,
     CustomerName: "Miron Vitold",
     ReleasedYear: "01/02/2021",
     OrderItems: "Healthcare Erbology",
@@ -1352,7 +1352,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 94757,
+    OrderID: 54,
     CustomerName: "Omar Darobe",
     ReleasedYear: "01/02/2021",
     OrderItems: "Makeup Lancome Rouge",
@@ -1366,7 +1366,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 944895,
+    OrderID: 55,
     CustomerName: "Lulia albu",
     ReleasedYear: "01/02/2021",
     OrderItems: "Skincare",
@@ -1380,7 +1380,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 56,
     CustomerName: "Penjani",
     ReleasedYear: "01/02/2021",
     OrderItems: "Headphone",
@@ -1394,7 +1394,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 845954,
+    OrderID: 57,
     CustomerName: "Jie Yan",
     ReleasedYear: "01/02/2021",
     OrderItems: "Shoes",
@@ -1409,7 +1409,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
-    OrderID: 874534,
+    OrderID: 58,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -1424,7 +1424,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 38489,
+    OrderID: 59,
     CustomerName: "Miron",
     ReleasedYear: "01/02/2021",
     OrderItems: "Ice Cream",
@@ -1439,7 +1439,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
-    OrderID: 24546,
+    OrderID: 60,
     CustomerName: "Frank",
     ReleasedYear: "01/02/2021",
     OrderItems: "Pan Cake",
@@ -1454,7 +1454,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
-    OrderID: 874534,
+    OrderID: 61,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
@@ -1469,7 +1469,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 10248,
+    OrderID: 62,
     CustomerName: "Vinet",
     ReleasedYear: "01/02/2021",
     Description:
@@ -1483,7 +1483,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 345653,
+    OrderID: 63,
     CustomerName: "Carson Darrin",
     ReleasedYear: "01/02/2021",
     OrderItems: "Butter Scotch",
@@ -1497,7 +1497,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 390457,
+    OrderID: 64,
     CustomerName: "Fran Perez",
     ReleasedYear: "01/02/2021",
     OrderItems: "Candy Gucci",
@@ -1511,7 +1511,7 @@ export const ordersData = [
     link1: "delete",
   },
   {
-    OrderID: 748975,
+    OrderID: 65,
     CustomerName: "Miron Vitold",
     ReleasedYear: "01/02/2021",
     OrderItems: "Healthcare Erbology",
