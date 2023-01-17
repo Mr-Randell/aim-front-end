@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     <section id="hero">
-      <div className="container flex flex-col-reverse h-screen justify-center items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+      <div className="container flex flex-col-reverse h-screen justify-center items-center px-6 mx-auto space-y-0 md:space-y-0 md:flex-row">
         {/* Left Item */}
         <div className="md:w-1/8 bg-gray-200">
           {/* <img src="src/assets/undraw_data_report.svg" alt="Educate on Maximized Efficiency"/> */}
