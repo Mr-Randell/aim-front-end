@@ -17,20 +17,14 @@ const NavBar = () => {
     <header
       className={`${
         bg ? "bg-tertiary h-20" : "h-24 text-black"
-      }   fixed top-0 w-full text-white z-10 transition-all duration-300`}
+      } fixed top-0 w-full text-white z-10 transition-all duration-300`}
     >
       <nav>
         <div className="flex items-center font-medium justify-around">
           <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-            {/* <img
-            src="https://freepngimg.com/save/25646-stock-market-clipart/1000x1000"
-            alt="logo"
-            className="md:cursor-pointer h-9"
-          /> */}
             <h1 className="md:cursor-pointer h-9 font-semibold text-3xl">
               AIM
             </h1>
-
             <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
               <HiOutlineMenuAlt3 name={`${open ? "close" : "menu"}`} />
             </div>

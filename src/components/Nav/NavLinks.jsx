@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./Mylinks";
-import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 const NavLinks = ({ setOpen, open }) => {
   const [heading, setHeading] = useState("");
@@ -20,14 +19,14 @@ const NavLinks = ({ setOpen, open }) => {
             >
               {link.name}
               <span className="text-xl md:hidden inline">
-                <GoChevronUp
+                <ion-icon
                   name={`${
-                    heading === link.name ? "chevron-up" : "chevron-down "
+                    heading === link.name ? "chevron-up" : "chevron-down"
                   }`}
-                />
+                ></ion-icon>
               </span>
               <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
-                <GoChevronDown name="chevron-down" />
+                <ion-icon name="chevron-down"></ion-icon>
               </span>
             </h1>
             {link.submenu && (
@@ -67,6 +66,7 @@ const NavLinks = ({ setOpen, open }) => {
             ${heading === link.name ? "md:hidden" : "hidden"}
           `}
           >
+            
             {/* sublinks */}
             {link.sublinks.map((slinks) => (
               <div>
@@ -82,13 +82,13 @@ const NavLinks = ({ setOpen, open }) => {
                     {slinks.Head}
 
                     <span className="text-xl md:mt-1 md:ml-2 inline">
-                      <GoChevronUp
+                      <ion-icon
                         name={`${
                           subHeading === slinks.Head
                             ? "chevron-up"
                             : "chevron-down"
                         }`}
-                      />
+                      ></ion-icon>
                     </span>
                   </h1>
                   <div
@@ -97,10 +97,7 @@ const NavLinks = ({ setOpen, open }) => {
                     }`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li
-                        className="py-3 pl-14 "
-                        onClick={() => setOpen(!open)}
-                      >
+                      <li className="py-3 pl-14" onClick={() => setOpen(!open)}>
                         <Link to={slink.link}>{slink.name}</Link>
                       </li>
                     ))}

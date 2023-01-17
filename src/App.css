@@ -54,3 +54,6 @@
   }
 }
 /*  */
+/* input[type="text"]:focus ~ .input-text{
+  @apply bg-white transform -translate-y-9 -translate-x-2 scale-75;
+} */
