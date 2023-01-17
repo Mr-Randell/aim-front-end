@@ -23,7 +23,7 @@ function ProfileForm() {
   return (
     <>
       <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-lg border-2 border-amber-600 shadow-xl overflow-x-auto">
-        <Header title="CREATE USER" description="Create a New User Profile" />
+        <Header title="CREATE USER" description="Create a New Employee Profile" />
 
         <Formik
           // classname="overflow-x-auto"
