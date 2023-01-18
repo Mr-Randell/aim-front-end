@@ -1,8 +1,9 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect} from "react";
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {HiOutlineMenuAlt3} from "react-icons/hi"
 import avatar from "../../assets/myself.jpeg";
 import { useStateContext } from '../../contexts/ContextProvider';
+import UserProfile from "./UserProfile";
 
 const NavButton = ({ customFunc, icon, color, dotColor }) => (
     <button
@@ -75,7 +76,7 @@ const TopNav = () => {
           <MdKeyboardArrowDown className="text-gray-400 text-14" />
         </div>
 
-        {/* {isClicked.userProfile && (<UserProfile />)}  */}
+        {isClicked.userProfile && (<UserProfile />)} 
       </div>
     </div>
   );
