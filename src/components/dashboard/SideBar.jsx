@@ -38,7 +38,7 @@ const SideBar = () => {
       ],
     },
     {
-      title: "Apps",
+      title: "Locations",
       links: [
         {
           name: "Profile-Form",

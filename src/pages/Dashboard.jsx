@@ -4,7 +4,7 @@ import { BiDotsVerticalRounded } from "react-icons/bi"
 
 const Dashboard = () => {
   return (
-    <section id="inventories">
+    <section id="dashboard">
         <div className="container flex flex-col h-screen items-center px-6 mx-auto justify-center">
             {/* Top Items */}
             <div className="container flex flex-col justify-center pt-6 mx-auto mt-10 space-y-12 md:space-y-0 md:space-x-10 md:flex-row">

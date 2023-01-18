@@ -17,7 +17,6 @@ function Main() {
         {activeMenu ? (
           <div className="w-72 fixed sidebar shadow-2xl ">
             <SideBar />
-            //{" "}
           </div>
         ) : (
           <div className="w-0">
@@ -42,7 +41,7 @@ function Main() {
                 pages
                 <Route path="/assets" element={<Assets />} />
                 <Route path="/employees" element={<Employees />} />
-                apps
+                locations
                 <Route path="/Profile-Form" element={<ProfileForm />} />
               </Routes>
             </div>
