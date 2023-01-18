@@ -16,35 +16,22 @@ import product7 from "./assets/product7.jpg";
 import product8 from "./assets/product8.jpg";
 
 // 
-import {
-  FiShoppingBag,
-  FiEdit,
-  FiPieChart,
-  FiBarChart,
-  FiCreditCard,
-  FiStar,
-  FiShoppingCart,
-} from "react-icons/fi";
-import {
-  BsKanban,
-  BsBarChart,
-  BsBoxSeam,
-  BsCurrencyDollar,
-  BsShield,
-  BsChatLeft,
-} from "react-icons/bs";
+import {BsCurrencyDollar,BsShield,} from "react-icons/bs";
+import { AiFillEdit, AiFillDelete, AiFillEye } from "react-icons/ai";
 
 
 // employee data
 export const employeesData = [
   {
     EmployeeID: 1,
-    Name: "Nancy Davolio",
+    Name: "Davolio Nancy",
     Title: "Sales Representative",
     HireDate: "01/02/2021",
     Country: "Zambia",
     ReportsTo: "Bilal",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 2,
@@ -54,6 +41,8 @@ export const employeesData = [
     Country: "Tanzania",
     ReportsTo: "Randell",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 3,
@@ -63,6 +52,8 @@ export const employeesData = [
     Country: "Kenya",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 4,
@@ -72,6 +63,8 @@ export const employeesData = [
     Country: "Malaysia",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 5,
@@ -81,6 +74,8 @@ export const employeesData = [
     Country: "Canada",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar5,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 6,
@@ -90,6 +85,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar6,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 7,
@@ -99,6 +96,8 @@ export const employeesData = [
     Country: "South Africa",
     ReportsTo: "Randell",
     EmployeeImage: avatar7,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 8,
@@ -108,6 +107,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar8,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 9,
@@ -117,6 +118,8 @@ export const employeesData = [
     Country: "Botswana",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar6,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 10,
@@ -126,6 +129,8 @@ export const employeesData = [
     Country: "Malawi",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar5,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 11,
@@ -135,6 +140,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 12,
@@ -144,6 +151,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 13,
@@ -153,6 +162,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 14,
@@ -162,6 +173,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 15,
@@ -171,6 +184,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 16,
@@ -180,6 +195,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 17,
@@ -189,6 +206,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 18,
@@ -198,6 +217,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 19,
@@ -207,6 +228,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 20,
@@ -216,6 +239,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 21,
@@ -225,6 +250,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 22,
@@ -234,6 +261,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 23,
@@ -243,6 +272,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 24,
@@ -252,6 +283,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 25,
@@ -261,6 +294,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 26,
@@ -270,6 +305,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 27,
@@ -279,6 +316,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 28,
@@ -288,6 +327,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 29,
@@ -297,6 +338,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 30,
@@ -306,6 +349,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 31,
@@ -315,6 +360,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 32,
@@ -324,6 +371,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 33,
@@ -333,6 +382,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 34,
@@ -342,6 +393,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 35,
@@ -351,6 +404,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 36,
@@ -360,6 +415,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 37,
@@ -369,6 +426,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 38,
@@ -378,6 +437,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 39,
@@ -387,6 +448,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 40,
@@ -396,6 +459,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 41,
@@ -405,6 +470,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 42,
@@ -414,6 +481,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 43,
@@ -423,6 +492,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 44,
@@ -432,6 +503,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 45,
@@ -441,6 +514,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 46,
@@ -450,6 +525,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 47,
@@ -459,6 +536,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 48,
@@ -468,6 +547,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 49,
@@ -477,6 +558,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 50,
@@ -486,6 +569,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 51,
@@ -495,6 +580,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 52,
@@ -504,6 +591,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 53,
@@ -513,6 +602,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 54,
@@ -522,6 +613,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 55,
@@ -531,6 +624,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Patrobas",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 56,
@@ -540,6 +635,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 57,
@@ -549,6 +646,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 58,
@@ -558,6 +657,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar3,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 59,
@@ -567,6 +668,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Randell",
     EmployeeImage: avatar4,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 60,
@@ -576,6 +679,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 61,
@@ -585,6 +690,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Hafsa",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 62,
@@ -594,6 +701,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Geoffrey",
     EmployeeImage: avatar,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
   {
     EmployeeID: 63,
@@ -603,6 +712,8 @@ export const employeesData = [
     Country: "USA",
     ReportsTo: "Bilal",
     EmployeeImage: avatar2,
+    link: <AiFillEdit />,
+    link1: <AiFillDelete />,
   },
 ];
 
@@ -619,8 +730,9 @@ export const ordersData = [
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage: product4,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 2,
@@ -633,8 +745,9 @@ export const ordersData = [
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage: product2,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 3,
@@ -647,8 +760,9 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     ProductImage: product3,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 4,
@@ -661,8 +775,9 @@ export const ordersData = [
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage: product4,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 5,
@@ -676,8 +791,9 @@ export const ordersData = [
     StatusBg: "#FB9678",
     ProductImage:
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 6,
@@ -691,8 +807,9 @@ export const ordersData = [
     StatusBg: "#FF5C8E",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 7,
@@ -706,8 +823,9 @@ export const ordersData = [
     StatusBg: "#03C9D7",
     ProductImage:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 8,
@@ -719,10 +837,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "complete",
     StatusBg: "#8BE78B",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 9,
@@ -734,10 +853,11 @@ export const ordersData = [
     Location: "USA",
     Status: "canceled",
     StatusBg: "#FF5C8E",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 10,
@@ -746,12 +866,13 @@ export const ordersData = [
     OrderItems: "Fresh Tomato",
     Location: "USA",
     Status: "pending",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#FB9678",
     ProductImage: product6,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 11,
@@ -760,12 +881,13 @@ export const ordersData = [
     OrderItems: "Butter Scotch",
     Location: "Delhi",
     Status: "complete",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#8BE78B",
     ProductImage: product5,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 12,
@@ -776,10 +898,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Location: "New York",
     Status: "active",
-    link: "edit",
-    link1: "delete",
     StatusBg: "#03C9D7",
     ProductImage: product7,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 13,
@@ -791,9 +914,10 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
     StatusBg: "#FF5C8E",
-    link: "edit",
-    link1: "delete",
     ProductImage: product4,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 14,
@@ -805,9 +929,10 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "red",
-    link: "edit",
-    link1: "delete",
     ProductImage: product1,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 15,
@@ -819,9 +944,10 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#FF5C8E",
-    link: "edit",
-    link1: "delete",
     ProductImage: product2,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 16,
@@ -833,9 +959,10 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#03C9D7",
-    link: "edit",
-    link1: "delete",
     ProductImage: product3,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 17,
@@ -847,9 +974,10 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#8BE78B",
-    link: "edit",
-    link1: "delete",
     ProductImage: product4,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 18,
@@ -861,10 +989,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "pending",
     StatusBg: "#FB9678",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 19,
@@ -876,10 +1005,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
     StatusBg: "#FF5C8E",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 20,
@@ -887,14 +1017,15 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Ice Cream",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 21,
@@ -902,14 +1033,15 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Pan Cake",
     Location: "Delhi",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage:
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 22,
@@ -917,14 +1049,15 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 23,
@@ -934,11 +1067,12 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Fresh Tomato",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Status: "pending",
     StatusBg: "#FB9678",
     ProductImage: product6,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 24,
@@ -950,9 +1084,10 @@ export const ordersData = [
     Location: "Delhi",
     Status: "complete",
     StatusBg: "#8BE78B",
-    link: "edit",
-    link1: "delete",
     ProductImage: product5,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 25,
@@ -964,9 +1099,10 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "active",
     StatusBg: "#03C9D7",
-    link: "edit",
-    link1: "delete",
     ProductImage: product7,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 26,
@@ -978,9 +1114,10 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#FF5C8E",
-    link: "edit",
-    link1: "delete",
     ProductImage: product4,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 27,
@@ -993,8 +1130,9 @@ export const ordersData = [
     Status: "rejected",
     StatusBg: "red",
     ProductImage: product1,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 28,
@@ -1007,8 +1145,9 @@ export const ordersData = [
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage: product2,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 29,
@@ -1021,8 +1160,9 @@ export const ordersData = [
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage: product3,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 30,
@@ -1035,8 +1175,9 @@ export const ordersData = [
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage: product4,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 31,
@@ -1048,10 +1189,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "pending",
     StatusBg: "#FB9678",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 32,
@@ -1063,10 +1205,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
     StatusBg: "#FF5C8E",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 33,
@@ -1074,14 +1217,15 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Ice Cream",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 34,
@@ -1089,22 +1233,21 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Pan Cake",
     Location: "Delhi",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage:
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 35,
     CustomerName: "Danai",
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Location: "USA",
@@ -1112,6 +1255,9 @@ export const ordersData = [
     StatusBg: "#FF5C8E",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 36,
@@ -1121,11 +1267,12 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Fresh Tomato",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Status: "pending",
     StatusBg: "#FB9678",
     ProductImage: product6,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 37,
@@ -1136,10 +1283,11 @@ export const ordersData = [
     OrderItems: "Butter Scotch",
     Location: "Delhi",
     Status: "complete",
-    link: "edit",
-    link1: "delete",
     StatusBg: "#8BE78B",
     ProductImage: product5,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 38,
@@ -1152,8 +1300,9 @@ export const ordersData = [
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage: product7,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 39,
@@ -1166,8 +1315,9 @@ export const ordersData = [
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage: product4,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 40,
@@ -1180,8 +1330,9 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "red",
     ProductImage: product1,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 41,
@@ -1194,8 +1345,9 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#FF5C8E",
     ProductImage: product2,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 42,
@@ -1208,8 +1360,9 @@ export const ordersData = [
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage: product3,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 43,
@@ -1222,8 +1375,9 @@ export const ordersData = [
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage: product4,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 44,
@@ -1235,10 +1389,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "pending",
     StatusBg: "#FB9678",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 45,
@@ -1250,10 +1405,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
     StatusBg: "#FF5C8E",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 46,
@@ -1265,10 +1421,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "active",
     StatusBg: "#03C9D7",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 47,
@@ -1280,10 +1437,11 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#8BE78B",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 48,
@@ -1291,14 +1449,15 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 49,
@@ -1308,11 +1467,12 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Fresh Tomato",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Status: "pending",
     StatusBg: "#FB9678",
     ProductImage: product6,
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 50,
@@ -1325,8 +1485,9 @@ export const ordersData = [
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage: product5,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 51,
@@ -1339,8 +1500,9 @@ export const ordersData = [
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage: product7,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 52,
@@ -1353,8 +1515,9 @@ export const ordersData = [
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage: product4,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 53,
@@ -1367,8 +1530,9 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "red",
     ProductImage: product1,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 54,
@@ -1381,8 +1545,9 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     StatusBg: "#FF5C8E",
     ProductImage: product2,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 55,
@@ -1395,8 +1560,9 @@ export const ordersData = [
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage: product3,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 56,
@@ -1409,8 +1575,9 @@ export const ordersData = [
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage: product4,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 57,
@@ -1422,10 +1589,11 @@ export const ordersData = [
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "pending",
     StatusBg: "#FB9678",
-    link: "edit",
-    link1: "delete",
     ProductImage:
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 58,
@@ -1436,11 +1604,12 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
-    link: "edit",
-    link1: "delete",
     StatusBg: "#FF5C8E",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 59,
@@ -1451,11 +1620,12 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "active",
-    link: "edit",
-    link1: "delete",
     StatusBg: "#03C9D7",
     ProductImage:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 60,
@@ -1466,11 +1636,12 @@ export const ordersData = [
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "complete",
-    link: "edit",
-    link1: "delete",
     StatusBg: "#8BE78B",
     ProductImage:
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 61,
@@ -1478,14 +1649,15 @@ export const ordersData = [
     ReleasedYear: "01/02/2021",
     OrderItems: "Watch",
     Location: "USA",
-    link: "edit",
-    link1: "delete",
     Description:
       "Equity is the debt-free evaluation of held assets or the difference between assets and liabilities",
     Status: "canceled",
     StatusBg: "#FF5C8E",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 62,
@@ -1498,8 +1670,9 @@ export const ordersData = [
     Status: "pending",
     StatusBg: "#FB9678",
     ProductImage: product6,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 63,
@@ -1512,8 +1685,9 @@ export const ordersData = [
     Status: "complete",
     StatusBg: "#8BE78B",
     ProductImage: product5,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 64,
@@ -1526,8 +1700,9 @@ export const ordersData = [
     Status: "active",
     StatusBg: "#03C9D7",
     ProductImage: product7,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
   {
     OrderID: 65,
@@ -1540,8 +1715,9 @@ export const ordersData = [
     Status: "rejected",
     StatusBg: "red",
     ProductImage: product1,
-    link: "edit",
-    link1: "delete",
+    link: <AiFillEye />,
+    link1: <AiFillEdit />,
+    link2: <AiFillDelete />,
   },
 ];
 
@@ -1561,11 +1737,4 @@ export const userProfileData = [
     iconColor: "rgb(0, 194, 146)",
     iconBg: "rgb(235, 250, 242)",
   },
-  // {
-  //   icon: <FiCreditCard />,
-  //   title: "My Tasks",
-  //   desc: "To-do and Daily Tasks",
-  //   iconColor: "rgb(255, 244, 229)",
-  //   iconBg: "rgb(254, 201, 15)",
-  // },
 ];
