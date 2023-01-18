@@ -13,7 +13,6 @@
   .heading:hover::after{
     @apply w-[100%]
   }
-
 }
 
 /* :root {

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./Mylinks";
-import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-const NavLinks = () => {
+const NavLinks = ({ setOpen, open }) => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   return (
@@ -20,14 +19,14 @@ const NavLinks = () => {
             >
               {link.name}
               <span className="text-xl md:hidden inline">
-                <GoChevronUp
+                <ion-icon
                   name={`${
                     heading === link.name ? "chevron-up" : "chevron-down"
                   }`}
-                />
+                ></ion-icon>
               </span>
               <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
-                <GoChevronDown name="chevron-down" />
+                <ion-icon name="chevron-down"></ion-icon>
               </span>
             </h1>
             {link.submenu && (
@@ -60,13 +59,14 @@ const NavLinks = () => {
               </div>
             )}
           </div>
-          
+
           {/* Mobile menus */}
           <div
             className={`
             ${heading === link.name ? "md:hidden" : "hidden"}
           `}
           >
+            
             {/* sublinks */}
             {link.sublinks.map((slinks) => (
               <div>
@@ -77,18 +77,18 @@ const NavLinks = () => {
                         ? setSubHeading(slinks.Head)
                         : setSubHeading("")
                     }
-                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
+                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center"
                   >
                     {slinks.Head}
 
                     <span className="text-xl md:mt-1 md:ml-2 inline">
-                      <GoChevronUp
+                      <ion-icon
                         name={`${
                           subHeading === slinks.Head
                             ? "chevron-up"
                             : "chevron-down"
                         }`}
-                      />
+                      ></ion-icon>
                     </span>
                   </h1>
                   <div
@@ -97,7 +97,7 @@ const NavLinks = () => {
                     }`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                      <li className="py-3 pl-14" onClick={() => setOpen(!open)}>
                         <Link to={slink.link}>{slink.name}</Link>
                       </li>
                     ))}
