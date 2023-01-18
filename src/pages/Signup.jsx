@@ -39,13 +39,13 @@ const Signup = () => {
           </div>
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
-              id="phone"
-              name="phone_number"
-              type="tel"
+              id="email"
+              name="email"
+              type="text"
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
-              placeholder="Phone Number"
+              placeholder="Email"
             />
-            <label for="phone" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Phone Number</label>
+            <label for="email" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Email</label>
           </div>
           {/* <input
             type="password"
@@ -88,13 +88,13 @@ const Signup = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="language"
-                  name="language"
+                  id="role"
+                  name="role"
                   type="text"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
-                  placeholder="Language"
+                  placeholder="Role"
                 />
-                <label for="language" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Language</label>
+                <label for="role" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Role</label>
               </div>
             </div>
           </div>
@@ -141,13 +141,13 @@ const Signup = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="interests"
-                  name="interests"
+                  id="industry"
+                  name="industry"
                   type="text"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
-                  placeholder="Primary Interests"
+                  placeholder="Industry"
                 />
-                <label for="interests" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Primary Interests</label>
+                <label for="industry" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Industry</label>
               </div>
             </div>
             <div className="md:hidden sm:block w-1/2 pl-2">
