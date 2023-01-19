@@ -8,6 +8,7 @@ import Employees from "./Employees";
 import ProfileForm from "./ProfileForm";
 import { useStateContext } from "../../contexts/ContextProvider";
 import AddingAssets from '../../components/dashboard/AddingAssets';
+import AddingEmployee from '../../components/dashboard/AddingEmployee';
 
 function Main() {
   const {activeMenu} = useStateContext();
@@ -45,6 +46,7 @@ function Main() {
                 locations
                 <Route path="/Profile-Form" element={<ProfileForm />} />
                 <Route path="/asset-Form" element={<AddingAssets />} />
+                <Route path="/employee-form" element={<AddingEmployee />} />
               </Routes>
             </div>
           </div>

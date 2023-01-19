@@ -14,7 +14,7 @@ function Employees() {
           <Header title="Employees" description="Managing the Team Members" />
           <div>
             <Link
-              to="/Profile-Form"
+              to="/employee-form"
               className="text-white bg-blue-500 p-4 shadow-lg justify-center capitalize rounded-lg "
             >
               Add Employee
