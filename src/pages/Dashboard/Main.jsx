@@ -7,6 +7,7 @@ import DashBoard from './DashBoard';
 import Employees from "./Employees";
 import ProfileForm from "./ProfileForm";
 import { useStateContext } from "../../contexts/ContextProvider";
+import AddingAssets from '../../components/dashboard/AddingAssets';
 
 function Main() {
   const {activeMenu} = useStateContext();
@@ -43,6 +44,7 @@ function Main() {
                 <Route path="/employees" element={<Employees />} />
                 locations
                 <Route path="/Profile-Form" element={<ProfileForm />} />
+                <Route path="/asset-Form" element={<AddingAssets />} />
               </Routes>
             </div>
           </div>
