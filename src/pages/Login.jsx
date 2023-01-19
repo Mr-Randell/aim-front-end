@@ -1,9 +1,12 @@
 import React from "react";
+import { NavBar } from "../components";
 
 const Login = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center">
-        <div className="container border flex flex-col-reverse justify-center items-center px-6 space-y-0 md:mt-1 md:space-y-0 md:flex-row transition ease-in-out delay-150 hover-translate-y-1 hover:scale-110 hover:md:shadow-2xl duration-300 ...">
+        <NavBar />
+        <div className="container flex flex-col-reverse justify-center items-center px-6 space-y-0 md:mt-1 md:space-y-0 md:flex-row ">
+            {/* transition ease-in-out delay-150 hover-translate-y-1 hover:scale-110 hover:md:shadow-2xl duration-300 ... */}
             <div className="flex flex-col items-center md:mb-32 md:space-y-12 md:relative md:w-1/2">
                 <form className="flex flex-col pl-4 w-full md:m-20 ">
                     <div className="flex mt-4">

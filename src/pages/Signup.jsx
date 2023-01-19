@@ -1,11 +1,13 @@
 import React from "react";
-// import '../App.css'
+import { NavBar } from "../components";
 
 const Signup = () => {
   return (
     <div className="h-screen flex flex-col justify-center">
+      <NavBar />
       {/* <div className="flex border flex-col mb-4 text-2xl">Sign Up here</div> */}
-      <div className="container mx-auto border-spacing-6 md:h-flex md:transition md:ease-in-out md:delay-150 md:hover-translate-y-1 md:hover:scale-110 md:hover:md:shadow-2xl md:duration-300 ...">
+      <div className="container mx-auto border-spacing-6 mt-20 md:h-flex ">
+        {/* md:transition md:ease-in-out md:delay-150 md:hover-translate-y-1 md:hover:scale-110 md:hover:md:shadow-2xl md:duration-300 ... */}
         <form className="flex flex-col m-10 ">
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
