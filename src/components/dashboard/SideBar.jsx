@@ -5,6 +5,8 @@ import { AiOutlineForm} from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { GiBassetHoundHead } from "react-icons/gi";
 import { useStateContext } from "../../contexts/ContextProvider";
+import {BsFillCalendarDateFill} from "react-icons/bs"
+import {FaQuestion} from "react-icons/fa"
 
 const SideBar = () => {
   const { activeMenu, setActiveMenu, screenSize} = useStateContext();
@@ -25,7 +27,7 @@ const SideBar = () => {
       ],
     },
     {
-      title: "Pages",
+      title: "Data",
       links: [
         {
           name: "assets",
@@ -38,11 +40,21 @@ const SideBar = () => {
       ],
     },
     {
-      title: "Locations",
+      title: "Pages",
+      // links: [
+      //   {
+      //     name: "Profile-Form",
+      //     icon: <AiOutlineForm size={25} />,
+      //   },
+      // ],
       links: [
         {
-          name: "Profile-Form",
-          icon: <AiOutlineForm size={25} />,
+          name: "Calendar",
+          icon: <BsFillCalendarDateFill size={20} />,
+        },
+        {
+          name: "FAQ",
+          icon: <FaQuestion size={20} />,
         },
       ],
     },
