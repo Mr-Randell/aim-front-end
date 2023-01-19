@@ -4,9 +4,7 @@ function AddingAssets() {
   return (
     <>
       <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-lg border-2 shadow-xl border-cyan-600 ">
-        <h2
-          className="text-cyan-500 ml-6 text-3xl font-extrabold tracking-tight "
-        >
+        <h2 className="text-cyan-500 ml-6 text-3xl font-extrabold tracking-tight ">
           Add New Assets
         </h2>
         <div className="flex flex-col justify-center">
@@ -51,7 +49,7 @@ function AddingAssets() {
               <label>Status:</label>
               <input
                 className="bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
-                type="number"
+                type="text"
                 required
                 // onChange={}
               />
@@ -60,7 +58,7 @@ function AddingAssets() {
               <label>Released Year:</label>
               <input
                 className="bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
-                type="text"
+                type="date"
                 required
                 // onChange={}
               />
