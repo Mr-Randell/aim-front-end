@@ -1,11 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
-import { AiOutlineForm} from "react-icons/ai";
+import { AiOutlineForm, AiOutlineBarChart } from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { GiBassetHoundHead } from "react-icons/gi";
 import { useStateContext } from "../../contexts/ContextProvider";
-import {BsFillCalendarDateFill} from "react-icons/bs"
+import { BsFillCalendarDateFill, BsMapFill } from "react-icons/bs";
 import {FaQuestion} from "react-icons/fa"
 
 const SideBar = () => {
@@ -55,6 +55,19 @@ const SideBar = () => {
         {
           name: "FAQ",
           icon: <FaQuestion size={20} />,
+        },
+      ],
+    },
+    {
+      title: "Locations",
+      links: [
+        // {
+        //   name: "bar",
+        //   icon: <AiOutlineBarChart size={25} />,
+        // },
+        {
+          name: "Geography-Chart",
+          icon: <BsMapFill size={20} />,
         },
       ],
     },
