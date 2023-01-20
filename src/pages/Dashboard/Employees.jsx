@@ -3,9 +3,130 @@ import Header from '../../components/dashboard/Header';
 import {employeesData} from "../../data"
 import { Reorder } from "framer-motion";
 import { Link } from 'react-router-dom';
+// import DataTable from '../../components/DataTableBase.jsx';
+// import { columns, data } from "../../data.jsx"
 
 function Employees() {
   const [data, setData] = useState(employeesData)
+  // const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
+
+  // const columns =[
+  //   {
+  //     name: 'Id',
+  //     selector: row => row.id,
+  //   },
+  //   {
+  //     name: 'Name',
+  //     selector: row => row.name,
+  //   },
+  //   {
+  //       name: 'Title',
+  //       selector: row => row.title,
+  //   },
+  //   {
+  //       name: 'Country',
+  //       selector: row => row.country,
+  //   },
+  //   {
+  //       name: 'Hire Date',
+  //       selector: row => row.hire_date,
+  //   },
+  //   {
+  //       name: 'Reports To',
+  //       selector: row => row.reports_to,
+  //   },
+  // ];
+
+  // const tData =[
+  //   {
+  //     EmployeeID: 1,
+  //     Name: "Davolio Nancy",
+  //     Title: "Sales Representative",
+  //     HireDate: "01/02/2021",
+  //     Country: "Zambia",
+  //     ReportsTo: "Bilal",
+  //     EmployeeImage: avatar,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  //   {
+  //     EmployeeID: 2,
+  //     Name: "Nasimiyu Danai",
+  //     Title: "Marketing Head",
+  //     HireDate: "01/04/2021",
+  //     Country: "Tanzania",
+  //     ReportsTo: "Randell",
+  //     EmployeeImage: avatar2,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  //   {
+  //     EmployeeID: 3,
+  //     Name: "Abdi abdul",
+  //     Title: "HR",
+  //     HireDate: "01/06/2021",
+  //     Country: "Kenya",
+  //     ReportsTo: "Patrobas",
+  //     EmployeeImage: avatar3,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  //   {
+  //     EmployeeID: 4,
+  //     Name: "Hafsa Nuh",
+  //     Title: "Marketing Head",
+  //     HireDate: "01/01/2020",
+  //     Country: "Malaysia",
+  //     ReportsTo: "Geoffrey",
+  //     EmployeeImage: avatar4,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  //   {
+  //     EmployeeID: 5,
+  //     Name: "Yahya Omar",
+  //     Title: "HR",
+  //     HireDate: "01/02/2020",
+  //     Country: "Canada",
+  //     ReportsTo: "Hafsa",
+  //     EmployeeImage: avatar5,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  //   {
+  //     EmployeeID: 6,
+  //     Name: "Iyan Penjani",
+  //     Title: "Marketing Head",
+  //     HireDate: "01/02/2021",
+  //     Country: "USA",
+  //     ReportsTo: "Bilal",
+  //     EmployeeImage: avatar6,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  //   {
+  //     EmployeeID: 7,
+  //     Name: "Ahmed Vitold",
+  //     Title: "HR",
+  //     HireDate: "01/05/2020",
+  //     Country: "South Africa",
+  //     ReportsTo: "Randell",
+  //     EmployeeImage: avatar7,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  //   {
+  //     EmployeeID: 8,
+  //     Name: "Hali Davolio",
+  //     Title: "Sales Representative",
+  //     HireDate: "01/01/2019",
+  //     Country: "USA",
+  //     ReportsTo: "Patrobas",
+  //     EmployeeImage: avatar8,
+  //     link: <AiFillEdit />,
+  //     link1: <AiFillDelete />,
+  //   },
+  // ];
 
   return (
     <>
@@ -23,6 +144,12 @@ function Employees() {
         </div>
         <div className="-mx-4  px-4  py-4 ">
           <div className="inline-block min-w-full shadow-md rounded-lg  ">
+            {/* <DataTable
+              columns={columns}
+              data={data}
+              expandableRows
+              expandableRowsComponent={ExpandedComponent}
+            /> */}
             <Reorder.Group values={data} onReorder={setData}>
               <table className="min-w-full overflow-hidden leading-normal">
                 <thead>

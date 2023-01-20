@@ -19,6 +19,32 @@ import product8 from "./assets/product8.jpg";
 import {BsCurrencyDollar,BsShield,} from "react-icons/bs";
 import { AiFillEdit, AiFillDelete, AiFillEye } from "react-icons/ai";
 
+export const columns =[
+  {
+    name: 'Id',
+    selector: row => row.id,
+  },
+  {
+    name: 'Name',
+    selector: row => row.name,
+  },
+  {
+      name: 'Title',
+      selector: row => row.title,
+  },
+  {
+      name: 'Country',
+      selector: row => row.country,
+  },
+  {
+      name: 'Hire Date',
+      selector: row => row.hire_date,
+  },
+  {
+      name: 'Reports To',
+      selector: row => row.reports_to,
+  },
+];
 
 // employee data
 export const employeesData = [
