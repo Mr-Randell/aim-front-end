@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export const Signup = () => {
+  const [user, setUser] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -20,10 +21,23 @@ export const Signup = () => {
       body: JSON.stringify({ username , password, companyName, phoneNumber, country, language, companySize, primaryInterest }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => onSignup(user));
+        r.json().then((user) => onSignUp(user));
       }
     });
   }
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  function onSignUp(user) {
+    setUser(user);
+  }
+
   return (
     <div className="container mx-auto border-4  border-spacing-6 max-w-screen-sm max-w-screen-xl xl:h-4/5">
       <form className="flex flex-col m-10 ">
