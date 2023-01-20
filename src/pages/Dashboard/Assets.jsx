@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from "../../components/dashboard/Header";
 import { ordersData } from "../../data";
 import { Reorder } from "framer-motion";
@@ -7,6 +7,17 @@ import { Link } from 'react-router-dom';
 
 
 function Assets() {
+  //
+  const [assetItems, setAssetsItems] = useState([]);
+  console.log(assetItems)
+
+  // GET Assets
+  useEffect(() => {
+    fetch("http://localhost:3000/assets")
+      .then((r) => r.json())
+      .then((data) => setAssetsItems(data));
+  }, []);
+  //
   const [data, setData] = useState(ordersData);
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
