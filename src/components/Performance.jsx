@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import dataReport from "../assets/undraw_data_report.svg"
 
 const Performance = () => {
   return (
@@ -7,7 +8,7 @@ const Performance = () => {
       <div className="container flex flex-col-reverse h-screen items-center px-6 mx-auto space-y-0 md:space-y-0 md:flex-row">
         {/* Right Item */}
         <div className="md:w-3/4">
-          <img src={"src/assets/undraw_data_report.svg"} alt="Educate on Maximized Efficiency"/>
+          <img src={ dataReport} alt="Educate on Maximized Efficiency"/>
         </div>
         {/* Left Items */}
         <div className="flex flex-col mb-32 space-y-12 md:w-1/2">
