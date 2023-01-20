@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import reading from "../assets/undraw_reading.svg"
 import { Performance, Features, Hero, NavBar, Footer } from "../components";
 
 const Discover = () => {
@@ -25,7 +26,7 @@ const Discover = () => {
           </div>
           {/* Right Item */}
           <div className="-mr-44 md:w-1/2" />
-            <img src={"src/assets/undraw_reading.svg"} alt="Educate on Maximized Efficiency"/>
+            <img src={ reading } alt="Educate on Maximized Efficiency"/>
         </div>
         <Performance />
         <Features />
