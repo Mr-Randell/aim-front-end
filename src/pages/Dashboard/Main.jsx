@@ -9,7 +9,7 @@ import ProfileForm from "./ProfileForm";
 import { useStateContext } from "../../contexts/ContextProvider";
 import AddingAssets from '../../components/dashboard/AddingAssets';
 import AddingEmployee from '../../components/dashboard/AddingEmployee';
-import Calendar from '../../components/dashboard/Calendar';
+import CalendarDate from '../../components/dashboard/Calendar';
 import Faq from '../../components/dashboard/Faq';
 
 function Main() {
@@ -49,7 +49,7 @@ function Main() {
                 {/* <Route path="/Profile-Form" element={<ProfileForm />} /> */}
                 <Route path="/asset-Form" element={<AddingAssets />} />
                 <Route path="/employee-form" element={<AddingEmployee />} />
-                <Route path="/Calendar" element={<Calendar />} />
+                <Route path="/Calendar" element={<CalendarDate />} />
                 <Route path="/FAQ" element={<Faq />} />
               </Routes>
             </div>
