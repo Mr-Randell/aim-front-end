@@ -53,8 +53,8 @@ function Main() {
                 <Route path="/employee-form" element={<AddingEmployee />} />
                 <Route path="/Calendar" element={<CalendarDate />} />
                 <Route path="/FAQ" element={<Faq />} />
-                Charts
-                <Route path="/bar" element={<BarChart />} />
+                Locations
+                {/* <Route path="/bar" element={<BarChart />} /> */}
                 <Route path="/Geography-Chart" element={<GeographyChart />} />
               </Routes>
             </div>

@@ -59,12 +59,12 @@ const SideBar = () => {
       ],
     },
     {
-      title: "Charts",
+      title: "Locations",
       links: [
-        {
-          name: "bar",
-          icon: <AiOutlineBarChart size={25} />,
-        },
+        // {
+        //   name: "bar",
+        //   icon: <AiOutlineBarChart size={25} />,
+        // },
         {
           name: "Geography-Chart",
           icon: <BsMapFill size={20} />,
