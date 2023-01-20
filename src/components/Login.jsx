@@ -1,10 +1,11 @@
 import React from "react";
+import login from "../assets/undraw_login.svg"
 
 function Login() {
   return (
     <div
       className="container mx-auto border-4  border-spacing-6 bg-no-repeat bg-right bg-bottom-70 bg-size-50x50 max-w-screen-sm max-w-screen-xl xl:h-4/5"
-      style={{ backgroundImage: "url({'src/assets/undraw_login.svg'}) " }}
+      style={{ backgroundImage: {login} }}
     >
       <form className="flex flex-col m-20 ">
         <div className="flex mt-4">
