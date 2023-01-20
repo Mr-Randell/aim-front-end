@@ -22,7 +22,7 @@ const Hero = () => {
           </p>
         </div>
       </div> */}
-        <img className="border flex w-screen" src={"src/assets/hero.png"} alt="Hero Image" />
+      <img className="border flex w-screen" src={"src/assets/hero.png"} alt="Hero Image" />
     </section>
   )
 }
