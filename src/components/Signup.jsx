@@ -13,12 +13,21 @@ export const Signup = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/signup", {
+    fetch("http://localhost:3000/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username , password, companyName, phoneNumber, country, language, companySize, primaryInterest }),
+      body: JSON.stringify({
+        username,
+        password,
+        companyName,
+        phoneNumber,
+        country,
+        language,
+        companySize,
+        primaryInterest,
+      }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => onSignUp(user));
@@ -27,7 +36,7 @@ export const Signup = () => {
   }
 
   useEffect(() => {
-    fetch("/me").then((response) => {
+    fetch("http://localhost:3000//me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }

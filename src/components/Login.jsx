@@ -8,12 +8,12 @@ function Login() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/login", {
+    fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username , password }),
+      body: JSON.stringify({ username, password }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => onLogin(user));
@@ -22,7 +22,7 @@ function Login() {
   }
 
   useEffect(() => {
-    fetch("/me").then((response) => {
+    fetch("http://localhost:3000/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }
