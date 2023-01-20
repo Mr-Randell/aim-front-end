@@ -10,12 +10,12 @@ const selectProps = { indeterminate: isIndeterminate => isIndeterminate };
 const DataTableBase = (props) => {
   return (
     <DataTable
-        pagination
-        selectableRowsComponent={Checkbox}
-        selectableRowsComponentProps={selectProps}
-        sortIcon={sortIcon}
-        // dense
-        {...props}
+      pagination
+      selectableRowsComponent={Checkbox}
+      selectableRowsComponentProps={selectProps}
+      sortIcon={sortIcon}
+      // dense
+      {...props}
     />
   )
 }
