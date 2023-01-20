@@ -25,7 +25,7 @@ const Discover = () => {
           </div>
           {/* Right Item */}
           <div className="-mr-44 md:w-1/2" />
-            <img src="src/assets/undraw_reading.svg" alt="Educate on Maximized Efficiency"/>
+            <img src={"src/assets/undraw_reading.svg"} alt="Educate on Maximized Efficiency"/>
         </div>
         <Performance />
         <Features />
