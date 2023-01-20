@@ -67,12 +67,12 @@ function CalendarDate() {
     }
 
   return (
-    <div className="App">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-lg border-2 border-teal-600 shadow-xl overflow-x-auto">
       {/* <h1>Calendar</h1> */}
       <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 ml-12">
         Add New Event
       </h2>
-      <div className="ml-12 p-2">
+      <div className="ml-12 p-2 overflow-hidden">
         <input
           type="text"
           placeholder="Add Title"
@@ -82,17 +82,17 @@ function CalendarDate() {
         />
         <DatePicker
           placeholderText="Start Date"
-          style={{ marginRight: "10px", padding: "10px" }}
+          style={{ marginRight: "10px", padding: "10px", overflow: 'hidden' }}
           selected={newEvent.start}
           onChange={(start) => setNewEvent({ ...newEvent, start })}
         />
-        <DatePicker
+        <DatePicker className='overflow-hidden'
           placeholderText="End Date"
           selected={newEvent.end}
           onChange={(end) => setNewEvent({ ...newEvent, end })}
         />
         <button
-        className='bg-blue-500 p-1 rounded-sm text-white'
+          className="bg-blue-500 p-1 rounded-sm text-white"
           stlye={{ marginTop: "10px", padding: "10px" }}
           onClick={handleAddEvent}
         >
