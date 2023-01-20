@@ -1738,3 +1738,37 @@ export const userProfileData = [
     iconBg: "rgb(235, 250, 242)",
   },
 ];
+
+// FAQ data
+export const TriviaQuestion = [
+  {
+    headingID: 1,
+    question: "An Important Question?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis ege",
+  },
+  {
+    headingID: 2,
+    question: "Another Important Question?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis ege",
+  },
+  {
+    headingID: 3,
+    question: "Your Favorite Question?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis ege",
+  },
+  {
+    headingID: 4,
+    question: "Some Random Question?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis ege",
+  },
+  {
+    headingID: 5,
+    question: "The Final Question?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissemalesuada lacus ex, sit amet blandit leo lobortis ege",
+  },
+];
