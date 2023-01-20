@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import login from "../assets/undraw_login.svg"
 
 function Login() {
+  const [user, setUser] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,6 +19,18 @@ function Login() {
         r.json().then((user) => onLogin(user));
       }
     });
+  }
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  function onLogin(user) {
+    setUser(user);
   }
 
   return (
