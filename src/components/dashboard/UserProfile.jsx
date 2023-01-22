@@ -79,7 +79,7 @@ const UserProfile = ({ currentuser}) => {
       <div className="mt-5">
         <button
           type="button"
-          onClick={() => handleSignout}
+          onClick={handleSignout}
           className="p-3 rounded-md w-full hover:drop-shadow-xl bg-blue-500 text-xl text-white"
         >
           Logout

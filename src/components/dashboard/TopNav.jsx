@@ -4,6 +4,7 @@ import {HiOutlineMenuAlt3} from "react-icons/hi"
 import avatar from "../../assets/myself.jpeg";
 import { useStateContext } from '../../contexts/ContextProvider';
 import UserProfile from "./UserProfile";
+import {FaUserCircle} from "react-icons/fa"
 
 const NavButton = ({ customFunc, icon, color, dotColor }) => (
     <button
@@ -67,21 +68,22 @@ const TopNav = ({ currentuser }) => {
           className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
           onClick={() => handleClick("userProfile")}
         >
-          <img
+          <FaUserCircle className="rounded-full w-8 h-8" />
+          {/* <img
             className="rounded-full w-8 h-8"
             src={avatar}
             alt="user-profile"
-          />
+          /> */}
           <p>
             <span className="text-gray-400 text-14">Hi,</span>{" "}
-            <span className="text-gray-400 font-bold ml-1 text-14">Hafsa</span>
+            <span className="text-gray-400 font-bold ml-1 text-14">
+              {currentuser.username}
+            </span>
           </p>
           <MdKeyboardArrowDown className="text-gray-400 text-14" />
         </div>
 
-        {isClicked.userProfile && (
-          <UserProfile currentuser={currentuser} />
-        )}
+        {isClicked.userProfile && <UserProfile currentuser={currentuser} />}
       </div>
     </div>
   );
