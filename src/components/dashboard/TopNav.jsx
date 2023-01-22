@@ -20,7 +20,10 @@ const NavButton = ({ customFunc, icon, color, dotColor }) => (
     </button>
 );
 
-const TopNav = () => {
+const TopNav = ({ currentuser }) => {
+
+  // const { username, role, email } = currentuser;
+  // console.log(username);
   const {
     currentColor,
     activeMenu,
@@ -76,7 +79,9 @@ const TopNav = () => {
           <MdKeyboardArrowDown className="text-gray-400 text-14" />
         </div>
 
-        {isClicked.userProfile && (<UserProfile />)} 
+        {isClicked.userProfile && (
+          <UserProfile currentuser={currentuser} />
+        )}
       </div>
     </div>
   );

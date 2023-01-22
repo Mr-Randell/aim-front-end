@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Routes, Route } from "react-router-dom";
 import SideBar from "../../components/dashboard/SideBar";
 import TopNav from '../../components/dashboard/TopNav';
@@ -13,9 +13,24 @@ import CalendarDate from '../../components/dashboard/Calendar';
 import Faq from '../../components/dashboard/Faq';
 import GeographyChart from '../../components/dashboard/GeographyChart';
 import BarChart from "../../components/dashboard/BarChart"
+import { login , selectUser } from "../../redux/features/userSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 function Main() {
-  const {activeMenu} = useStateContext();
+  const { activeMenu } = useStateContext();
+  const currentuser = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  console.log(currentuser);
+
+  // GET /me
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) =>dispatch(login(user)));
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -37,7 +52,7 @@ function Main() {
           }
         >
           <div className="fixed md:static navbar w-full ">
-            <TopNav />
+            <TopNav currentuser={currentuser} />
           </div>
           <div>
             <div>
@@ -50,12 +65,18 @@ function Main() {
                 Pages
                 {/* <Route path="/Profile-Form" element={<ProfileForm />} /> */}
                 <Route path="/asset-Form" element={<AddingAssets />} />
-                <Route path="/employee-form" element={<AddingEmployee />} />
+                <Route
+                  path="/employee-form"
+                  element={<AddingEmployee />}
+                />
                 <Route path="/Calendar" element={<CalendarDate />} />
                 <Route path="/FAQ" element={<Faq />} />
                 Locations
                 {/* <Route path="/bar" element={<BarChart />} /> */}
-                <Route path="/Geography-Chart" element={<GeographyChart />} />
+                <Route
+                  path="/Geography-Chart"
+                  element={<GeographyChart />}
+                />
               </Routes>
             </div>
           </div>

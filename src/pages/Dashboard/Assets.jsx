@@ -13,7 +13,7 @@ function Assets() {
 
   // GET Assets
   useEffect(() => {
-    fetch("http://localhost:3000/assets")
+    fetch("https://aim-snb2.onrender.com/assets")
       .then((r) => r.json())
       .then((data) => setAssetsItems(data));
   }, []);
