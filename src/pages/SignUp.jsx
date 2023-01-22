@@ -1,19 +1,72 @@
-import React from "react";
+import React, {useState, useEffect, useRef} from "react";
+import { Link } from "react-router-dom";
 import { NavBar } from "../components";
 
-const Signup = () => {
+const SignUp = () => {
+  const userRef = useRef();
+  const errRef = useRef();
+  const [user, setUser] = useState("");
+  const [errMsg, setErrMsg] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [role, setRole] = useState("");
+  const [companySize, setCompanySize] = useState("");
+  const [primaryInterest, setPrimaryInterest] = useState("");
+
+  useEffect( () => { 
+    userRef.current.focus();
+ }, []);
+
+  useEffect( () => { 
+    setErrMsg("");
+  }, [username, password, companyName, email, country, role, companySize, primaryInterest]);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("https://aim-snb2.onrender.com/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password, companyName, email, country, role, companySize, primaryInterest }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((username) => onSignUp(username));
+      }
+    });
+  }
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+    if (response.ok) {
+        response.json().then((user) => setUser(user));
+    }
+    });
+  }, []);
+
+  function onSignUp(user) {
+      setUser(user);
+  }
+  
   return (
     <div className="h-screen flex flex-col justify-center">
       <NavBar />
       {/* <div className="flex border flex-col mb-4 text-2xl">Sign Up here</div> */}
       <div className="container mx-auto border-spacing-6 mt-20 md:h-flex ">
         {/* md:transition md:ease-in-out md:delay-150 md:hover-translate-y-1 md:hover:scale-110 md:hover:md:shadow-2xl md:duration-300 ... */}
-        <form className="flex flex-col m-10 ">
+        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+        <form onSubmit={ handleSubmit } className="flex flex-col m-10">
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
               id="username"
               name="username"
               type="text"
+              value={ username }
+              ref={ userRef }
+              onChange={(e) => setUsername(e.target.value)}
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Username"
             />
@@ -24,6 +77,8 @@ const Signup = () => {
               id="password"
               name="password"
               type="password"
+              value={ password }
+              onChange={(e) => setPassword(e.target.value)}
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Password"
             />
@@ -31,19 +86,23 @@ const Signup = () => {
           </div>
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
-              id="company_name"
-              name="company_name"
+              id="companyName"
+              name="companyName"
               type="text"
+              value={ companyName }
+              onChange={(e) => setCompanyName(e.target.value)}
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Company Name"
             />
-            <label for="company_name" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Company Name</label>
+            <label for="companyName" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Company Name</label>
           </div>
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
               id="email"
               name="email"
               type="text"
+              value={ email }
+              onChange={(e) => setEmail(e.target.value)}
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Email"
             />
@@ -76,6 +135,8 @@ const Signup = () => {
                   id="country"
                   name="country"
                   type="text"
+                  value={ country }
+                  onChange={(e) => setCountry(e.target.value)}
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Country"
                 />
@@ -93,6 +154,8 @@ const Signup = () => {
                   id="role"
                   name="role"
                   type="text"
+                  value={ role }
+                  onChange={(e) => setRole(e.target.value)}
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Role"
                 />
@@ -109,13 +172,15 @@ const Signup = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="company_size"
-                  name="company_size"
+                  id="companySize"
+                  name="companySize"
                   type="text"
+                  value={ companySize }
+                  onChange={(e) => setCompanySize(e.target.value)}
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Company Size"
                 />
-                <label for="company_size" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Company Size</label>
+                <label for="companySize" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Company Size</label>
               </div>
             </div>
             <div className="md:hidden sm:block w-1/2 pl-2">
@@ -126,13 +191,15 @@ const Signup = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="company_size"
-                  name="company_size"
+                  id="companySize"
+                  name="companySize"
                   type="text"
+                  value={ companySize }
+                  onChange={(e) => setCompanySize(e.target.value)}
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Size"
                 />
-                <label for="company_size" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Size</label>
+                <label for="companySize" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Size</label>
               </div>
             </div>
             <div className="hidden md:block w-1/2 pl-2">
@@ -143,13 +210,15 @@ const Signup = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="industry"
-                  name="industry"
+                  id="primaryInterest"
+                  name="primaryInterest"
                   type="text"
+                  value={ primaryInterest }
+                  onChange={(e) => setIndustry(e.target.value)}
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
-                  placeholder="Industry"
+                  placeholder="primaryInterest"
                 />
-                <label for="industry" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Industry</label>
+                <label for="primaryInterest" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Industry</label>
               </div>
             </div>
             <div className="md:hidden sm:block w-1/2 pl-2">
@@ -160,13 +229,15 @@ const Signup = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="interests"
-                  name="interests"
+                  id="primaryInterest"
+                  name="primaryInterest"
                   type="text"
+                  value={ primaryInterest }
+                  onChange={(e) => setPrimaryInterest(e.target.value)}
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Interests"
                 />
-                <label for="interests" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Interests</label>
+                <label for="primaryInterest" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Interests</label>
               </div>
             </div>
           </div>
@@ -177,16 +248,18 @@ const Signup = () => {
               <u>Subscription Agreement</u> and <u>Privacy Policy</u>
             </p>
           </div>
-          <button
-            className="p-3 px-6 pt-2 text-white md:bg-blue-800 md:w-1/6 md:hover:bg-blue-700 sm:bg-blue-700"
-            type="submit"
-          >
-            Sign Up
-          </button>
+          <Link to="/dashboard">
+            <button
+              className="p-3 px-6 pt-2 text-white md:bg-blue-800 md:w-1/6 md:hover:bg-blue-700 sm:bg-blue-700"
+              type="submit"
+            >
+              Sign Up
+            </button>
+          </Link>
         </form>
       </div>
     </div>
   );
 };
 
-export default Signup
+export default SignUp

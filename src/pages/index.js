@@ -1,6 +1,6 @@
 import Overview from "./Overview";
 import Main from "./Dashboard/Main";
-import Signup from "./Signup";
+import Signup from "./SignUp";
 import Login from "./Login";
 import Dashboard from "./Dashboard";
 
