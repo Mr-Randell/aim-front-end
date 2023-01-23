@@ -7,17 +7,30 @@ const URL = "https://aim-snb2.onrender.com/employees";
 function Employees() {
  const [employee, setEmployee]= useState([])
  console.log(employee)
-//  const {id, name} = employee
-//  get
+
+//  Get Employee
+const getEmployee =()=>{
+  fetch(URL)
+    .then((r) => r.json())
+    .then((data) => setEmployee(data));
+
+}
   useEffect(()=>{
-    fetch(URL)
-      .then((r) => r.json())
-      .then((data) => setEmployee(data));
+    getEmployee()
   }, [])
 
-  // Delete
-
-
+  // Delete Employee
+  const deleteEmployee = (id) => {
+    fetch(`${URL}/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        const deleteTheEmployee = employee.filter((perEmployee) => {
+          return perEmployee.id !== id;
+        });
+        setEmployee(deleteTheEmployee);
+      });
+  };
 
   return (
     <>
@@ -104,7 +117,7 @@ function Employees() {
                           <div className="ml-2 justify-center bg-red-500 p-2 rounded-sm">
                             <button
                               className="text-white capitalize"
-                              // onClick={()=> deleteemployee}
+                              onClick={()=> deleteEmployee(cryptocurrency.id)}
                             >
                               Delete
                             </button>

@@ -1,6 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function AddingAssets() {
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
+  const [description, setdescription] = useState("");
+  const [image_url, setImageUrl] = useState("");
+  const [price, setPrice] = useState("");
+  const [released_year, setReleasedYear] = useState("");
+  const [status, setStatus] = useState('')
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const asset = {
+      name,
+      location,
+      description,
+      image_url,
+      price,
+      released_year,
+      status,
+    };
+
+    fetch("https://aim-snb2.onrender.com/assets", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(asset),
+    }).then(() => {
+      console.log("new employee added");
+    });
+    // e.target.reset()
+    setName("");
+    setLocation("");
+    setdescription("");
+    setImageUrl("");
+    setPrice("");
+    setReleasedYear("");
+    setStatus("");
+  }
   return (
     <>
       <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-lg border-2 shadow-xl border-cyan-600 ">
@@ -10,30 +46,39 @@ function AddingAssets() {
         <div className="flex flex-col justify-center">
           <form
             className=" p-8 px-8 rounded-lg"
-            // onSubmit={handleSubmit}
+            onSubmit={handleSubmit}
           >
             <div className="flex flex-col text-black py-2">
               <label>Asset Name:</label>
               <input
                 className=" bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
-                require
-                // onChange={}
+                required
+                id="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="flex flex-col text-black py-2">
               <label>Asset Image:</label>
-              <input
+              <textarea
                 className="bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
                 required
-                // onChange={}
-              />
+                id="image_url"
+                type="text"
+                value={image_url}
+                onChange={(e) => setImageUrl(e.target.value)}
+              ></textarea>
             </div>
             <div className="flex flex-col text-black py-2">
               <label>Description:</label>
               <textarea
                 className="bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
                 required
-                // onChange={}
+                id="description"
+                type="text"
+                value={description}
+                onChange={(e) => setdescription(e.target.value)}
               ></textarea>
             </div>
             <div className="flex flex-col text-black py-2">
@@ -42,25 +87,31 @@ function AddingAssets() {
                 className="bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
                 type="text"
                 required
-                // onChange={}
+                id="location"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
               />
             </div>
             <div className="flex flex-col text-black py-2">
               <label>Status:</label>
               <input
                 className="bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
-                type="text"
                 required
-                // onChange={}
+                id="status"
+                type="text"
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
               />
             </div>
             <div className="flex flex-col text-black py-2">
               <label>Released Year:</label>
               <input
                 className="bg-gray-200 mt-2 p-2 border-blue-500 focus:bg-gray-200 focus:outline-none"
-                type="date"
+                type="number"
                 required
-                // onChange={}
+                id="released_year"
+                value={released_year}
+                onChange={(e) => setReleasedYear(e.target.value)}
               />
             </div>
             <button className="w-full my-5 py-2 bg-cyan-600 shadow-lg  text-white font-semibold ">
