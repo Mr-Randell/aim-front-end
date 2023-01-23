@@ -137,25 +137,27 @@ function Assets() {
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <div className="flex">
                           <div className="flex-shrink-0 justify-center bg-green-500 p-2 rounded-sm">
-                            <button
+                            <Link
+                              to={`view/${cryptocurrency.id}`}
                               className="text-white capitalize "
                               // onClick={()=> viewAsset}
                             >
                               View
-                            </button>
+                            </Link>
                           </div>
                           <div className="ml-2 justify-center bg-blue-500 p-2 rounded-sm">
-                            <button
+                            <Link
+                              to={`edit/${cryptocurrency.id}`}
                               className="text-white capitalize "
                               // onClick={()=> editAsset}
                             >
                               Edit
-                            </button>
+                            </Link>
                           </div>
                           <div className="ml-2 justify-center bg-red-500 p-2 rounded-sm">
                             <button
                               className="text-white capitalize"
-                              onClick={()=> deleteAsset(cryptocurrency.id)}
+                              onClick={() => deleteAsset(cryptocurrency.id)}
                             >
                               Delete
                             </button>
