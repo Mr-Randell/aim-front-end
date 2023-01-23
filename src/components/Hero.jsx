@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import hero from "../assets/hero.png"
 
 const Hero = () => {
   return (
@@ -22,7 +23,7 @@ const Hero = () => {
           </p>
         </div>
       </div> */}
-        <img className="border flex w-screen" src={"src/assets/hero.png"} alt="Hero Image" />
+        <img className="border flex w-screen" src={hero} alt="Hero Image" />
     </section>
   )
 }
