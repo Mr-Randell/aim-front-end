@@ -3,8 +3,29 @@ import { MdOutlineCancel } from 'react-icons/md';
 import { userProfileData } from '../../data';
 import { useStateContext } from '../../contexts/ContextProvider';
 import avatar from "../../assets/myself.jpeg";
+import {FaUserCircle} from "react-icons/fa"
+// 
+import { useDispatch } from "react-redux";
+import { logout } from "../../redux/features/userSlice";
+import { useNavigate } from "react-router-dom";
 
-const UserProfile = () => {
+const UserProfile = (
+  // { currentuser}
+  ) => {
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+
+  // user signout
+  function handleSignout() {
+    fetch("https://aim-snb2.onrender.com/logout", {
+      method: "delete",
+    });
+    dispatch(logout(null));
+    navigate("/");
+  }
+  //
   const { setIsClicked, initialState } = useStateContext();
 
   return (
@@ -14,29 +35,22 @@ const UserProfile = () => {
         <button
           type="button"
           onClick={() => setIsClicked(initialState)}
-          className='p-3 hover:drop-shadow-xl hover:bg-blue-500 rounded-full text-sm'
+          className="p-3 hover:drop-shadow-xl hover:bg-blue-500 rounded-full text-sm"
         >
           <MdOutlineCancel />
         </button>
       </div>
       <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-6">
-        <img
-          className="rounded-full h-24 w-24"
-          src={avatar}
-          alt="user-profile"
-        />
+        <FaUserCircle className="rounded-full h-24 w-24" />
         <div>
           <p className="font-semibold text-xl dark:text-gray-500">
-            {" "}
-            Hafsa Nuh{" "}
+            {/* {currentuser.username} */}
           </p>
           <p className="text-gray-500 text-sm dark:text-gray-400">
-            {" "}
-            Administrator{" "}
+            {/* {currentuser.role} */}
           </p>
           <p className="text-gray-500 text-sm font-semibold dark:text-gray-400">
-            {" "}
-            info@aim.com{" "}
+            {/* {currentuser.email} */}
           </p>
         </div>
       </div>
@@ -67,7 +81,7 @@ const UserProfile = () => {
       <div className="mt-5">
         <button
           type="button"
-          // onClick={() => logout}
+          onClick={handleSignout}
           className="p-3 rounded-md w-full hover:drop-shadow-xl bg-blue-500 text-xl text-white"
         >
           Logout

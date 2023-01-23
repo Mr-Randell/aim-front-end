@@ -5,7 +5,11 @@ import { AiOutlineForm, AiOutlineBarChart } from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { GiBassetHoundHead } from "react-icons/gi";
 import { useStateContext } from "../../contexts/ContextProvider";
-import { BsFillCalendarDateFill, BsMapFill } from "react-icons/bs";
+import {
+  BsFillCalendarDateFill,
+  BsMapFill,
+  BsFillArrowLeftCircleFill,
+} from "react-icons/bs";
 import {FaQuestion} from "react-icons/fa"
 
 const SideBar = () => {
@@ -88,7 +92,8 @@ const SideBar = () => {
               onClick={handleCloseSideBar}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight  text-slate-900"
             >
-              <span>AIM</span>
+              <BsFillArrowLeftCircleFill />
+              <span>Back Home</span>
             </Link>
             {menus.map((item) => (
               <div key={item.title}>
