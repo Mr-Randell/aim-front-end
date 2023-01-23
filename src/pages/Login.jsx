@@ -1,8 +1,14 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect, useRef, useContext} from "react";
+import AuthContext from "../contexts/AuthProvider";
+import axios from "../api/axios";
 import { Link } from "react-router-dom";
 import { NavBar } from "../components";
+import { Password } from "@mui/icons-material";
+
+const LOGIN_URL = "/login";
 
 const Login = () => {
+    const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
     const [username, setUsername] = useState("");
@@ -19,30 +25,55 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        fetch("https://aim-snb2.onrender.com/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ username , password }),
-        }).then((r) => {
-          if (r.ok) {
-            r.json().then((username) => onLogin(username));
-          }
-        });
+        try { 
+            const response = await axios.post(LOGIN_URL, 
+                JSON.stringify({username, password}),
+                {
+                    header: {"Content-Type": "application/json"},
+                    withCredentials: true
+                }
+            );
+            console.log(JSON.stringify(response?.data));
+            // const role = response?.data?.role;
+            setAuth({ username, password });
+            setUsername("");
+            setPassword("");
+        } catch(err) {
+            if(!err?.response) {
+                setErrMsg("No Server Response");
+            } else if(err.response?.status === 400) {
+                setErrMsg("Missing Username or Password");
+            } else if(err.response?.status === 401) {
+                setErrMsg("Unauthorized");
+            } else {
+                setErrMsg("Login Failed");
+            }
+            errRef.current.focus();
+        }
+        // fetch("https://aim-snb2.onrender.com/login", {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify({ username , password }),
+        // }).then((r) => {
+        //   if (r.ok) {
+        //     r.json().then((username) => onLogin(username));
+        //   }
+        // });
     };
     
-    useEffect(() => {
-        fetch("/me").then((response) => {
-        if (response.ok) {
-            response.json().then((user) => setUser(user));
-        }
-        });
-    }, []);
+    // useEffect(() => {
+    //     fetch("/me").then((response) => {
+    //     if (response.ok) {
+    //         response.json().then((user) => setUser(user));
+    //     }
+    //     });
+    // }, []);
 
-    function onLogin(user) {
-        setUser(user);
-    }
+    // function onLogin(user) {
+    //     setUser(user);
+    // }
 
   return (
     <div className="h-screen flex flex-col justify-center items-center">
@@ -93,14 +124,16 @@ const Login = () => {
                                 />
                                 <label htmlFor="password" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Password</label>
                             </div>
-                            <Link to="/dashboard">
                                 <button
                                 className="text-white font-bold text-2xl py-4 w-full mt-3 md:bg-green-700 md:hover:bg-green-600 sm:bg-green-600"
                                 type="submit"
                                 >
                                 Login
                                 </button>
-                            </Link>
+                            <div className="relative w-full flex-col bg-transparent p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
+                                <p className="mt-4 flex w-full">Need an account?</p>
+                                <Link to="/signup" className="w-full"> <span className="text-blue-500">Sign Up</span> </Link>
+                            </div>
                         </div>
                     </div>
                 </form>

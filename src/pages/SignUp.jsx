@@ -14,7 +14,7 @@ const SignUp = () => {
   const [country, setCountry] = useState("");
   const [role, setRole] = useState("");
   const [companySize, setCompanySize] = useState("");
-  const [primaryInterest, setPrimaryInterest] = useState("");
+  const [industry, setIndustry] = useState("");
 
   useEffect( () => { 
     userRef.current.focus();
@@ -22,7 +22,7 @@ const SignUp = () => {
 
   useEffect( () => { 
     setErrMsg("");
-  }, [username, password, companyName, email, country, role, companySize, primaryInterest]);
+  }, [username, password, companyName, email, country, role, companySize, industry]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -31,7 +31,7 @@ const SignUp = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password, companyName, email, country, role, companySize, primaryInterest }),
+      body: JSON.stringify({ username, password, companyName, email, country, role, companySize, industry }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((username) => onSignUp(username));
@@ -67,8 +67,10 @@ const SignUp = () => {
               value={ username }
               ref={ userRef }
               onChange={(e) => setUsername(e.target.value)}
+              autoComplete="off"
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Username"
+              required
             />
             <label for="username" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Username</label>
           </div>
@@ -79,10 +81,12 @@ const SignUp = () => {
               type="password"
               value={ password }
               onChange={(e) => setPassword(e.target.value)}
+              autoComplete="off"
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Password"
+              required
             />
-            <label for="password" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Password</label>
+            <label for="password" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Password</label>
           </div>
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
@@ -91,10 +95,12 @@ const SignUp = () => {
               type="text"
               value={ companyName }
               onChange={(e) => setCompanyName(e.target.value)}
+              autoComplete="off"
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Company Name"
+              required
             />
-            <label for="companyName" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Company Name</label>
+            <label for="companyName" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Company Name</label>
           </div>
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
@@ -103,10 +109,12 @@ const SignUp = () => {
               type="text"
               value={ email }
               onChange={(e) => setEmail(e.target.value)}
+              autoComplete="off"
               className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
               placeholder="Email"
+              required
             />
-            <label for="email" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Email</label>
+            <label for="email" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Email</label>
           </div>
           {/* <input
             type="password"
@@ -137,10 +145,12 @@ const SignUp = () => {
                   type="text"
                   value={ country }
                   onChange={(e) => setCountry(e.target.value)}
+                  autoComplete="off"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Country"
+                  required
                 />
-                <label for="country" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Country</label>
+                <label for="country" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Country</label>
               </div>
             </div>
             <div className="w-1/2 pl-2">
@@ -156,10 +166,12 @@ const SignUp = () => {
                   type="text"
                   value={ role }
                   onChange={(e) => setRole(e.target.value)}
+                  autoComplete="off"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Role"
+                  required
                 />
-                <label for="role" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Role</label>
+                <label for="role" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Role</label>
               </div>
             </div>
           </div>
@@ -177,10 +189,12 @@ const SignUp = () => {
                   type="text"
                   value={ companySize }
                   onChange={(e) => setCompanySize(e.target.value)}
+                  autoComplete="off"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Company Size"
+                  required
                 />
-                <label for="companySize" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Company Size</label>
+                <label for="companySize" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Company Size</label>
               </div>
             </div>
             <div className="md:hidden sm:block w-1/2 pl-2">
@@ -196,10 +210,12 @@ const SignUp = () => {
                   type="text"
                   value={ companySize }
                   onChange={(e) => setCompanySize(e.target.value)}
+                  autoComplete="off"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Size"
+                  required
                 />
-                <label for="companySize" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Size</label>
+                <label for="companySize" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Size</label>
               </div>
             </div>
             <div className="hidden md:block w-1/2 pl-2">
@@ -210,15 +226,17 @@ const SignUp = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="primaryInterest"
-                  name="primaryInterest"
+                  id="industry"
+                  name="industry"
                   type="text"
-                  value={ primaryInterest }
+                  value={ industry }
                   onChange={(e) => setIndustry(e.target.value)}
+                  autoComplete="off"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
-                  placeholder="primaryInterest"
+                  placeholder="industry"
+                  required
                 />
-                <label for="primaryInterest" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Industry</label>
+                <label for="industry" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Industry</label>
               </div>
             </div>
             <div className="md:hidden sm:block w-1/2 pl-2">
@@ -229,15 +247,17 @@ const SignUp = () => {
               /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
-                  id="primaryInterest"
-                  name="primaryInterest"
+                  id="industry"
+                  name="industry"
                   type="text"
-                  value={ primaryInterest }
-                  onChange={(e) => setPrimaryInterest(e.target.value)}
+                  value={ industry }
+                  onChange={(e) => setIndustry(e.target.value)}
+                  autoComplete="off"
                   className="peer text-2xl w-full p-4 placeholder-transparent transition duration-200"
                   placeholder="Interests"
+                  required
                 />
-                <label for="primaryInterest" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Interests</label>
+                <label for="industry" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal peer-placeholder-shown:bg-transparent mx-6 transition duration-200 input-text">Industry</label>
               </div>
             </div>
           </div>
@@ -248,14 +268,12 @@ const SignUp = () => {
               <u>Subscription Agreement</u> and <u>Privacy Policy</u>
             </p>
           </div>
-          <Link to="/dashboard">
             <button
               className="p-3 px-6 pt-2 text-white md:bg-blue-800 md:w-1/6 md:hover:bg-blue-700 sm:bg-blue-700"
               type="submit"
             >
               Sign Up
             </button>
-          </Link>
         </form>
       </div>
     </div>
