@@ -9,6 +9,7 @@ import axios from "../API/axios"
 const LOGIN_URL= "/login"
 import Main from "./Dashboard/Main"
 import Assets from "./Dashboard/Assets";
+import loginPic from "src/assets/undraw_login.svg"
 
 const Login = () => {
   const {setAuth} = useContext(AuthContext)
@@ -175,7 +176,7 @@ const Login = () => {
               </form>
             </div>
             <div className="md:-ml-20 md:w-3/4">
-              <img src="src/assets/undraw_login.svg" alt="Login" />
+              <img src={loginPic} alt="Login" />
             </div>
           </div>
         </div>
