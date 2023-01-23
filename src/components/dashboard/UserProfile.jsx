@@ -9,7 +9,9 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../redux/features/userSlice";
 import { useNavigate } from "react-router-dom";
 
-const UserProfile = ({ currentuser}) => {
+const UserProfile = (
+  // { currentuser}
+  ) => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -42,13 +44,13 @@ const UserProfile = ({ currentuser}) => {
         <FaUserCircle className="rounded-full h-24 w-24" />
         <div>
           <p className="font-semibold text-xl dark:text-gray-500">
-            {currentuser.username}
+            {/* {currentuser.username} */}
           </p>
           <p className="text-gray-500 text-sm dark:text-gray-400">
-            {currentuser.role}
+            {/* {currentuser.role} */}
           </p>
           <p className="text-gray-500 text-sm font-semibold dark:text-gray-400">
-            {currentuser.email}
+            {/* {currentuser.email} */}
           </p>
         </div>
       </div>

@@ -21,7 +21,9 @@ const NavButton = ({ customFunc, icon, color, dotColor }) => (
     </button>
 );
 
-const TopNav = ({ currentuser }) => {
+const TopNav = (
+  // { currentuser }
+  ) => {
 
   // const { username, role, email } = currentuser;
   // console.log(username);
@@ -77,13 +79,15 @@ const TopNav = ({ currentuser }) => {
           <p>
             <span className="text-gray-400 text-14">Hi,</span>{" "}
             <span className="text-gray-400 font-bold ml-1 text-14">
-              {currentuser.username}
+              {/* {currentuser.username} */}
             </span>
           </p>
           <MdKeyboardArrowDown className="text-gray-400 text-14" />
         </div>
 
-        {isClicked.userProfile && <UserProfile currentuser={currentuser} />}
+        {isClicked.userProfile && <UserProfile 
+        // currentuser={currentuser} 
+        />}
       </div>
     </div>
   );

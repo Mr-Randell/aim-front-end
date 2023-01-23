@@ -26,7 +26,7 @@ function Assets() {
   // Get current data
   const indexOfLastPost = currentPage * dataPerPage;
   const indexOfFirstPost = indexOfLastPost - dataPerPage;
-  const currentData = data.slice(indexOfFirstPost, indexOfLastPost);
+  const currentData = assetItems.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -80,25 +80,25 @@ function Assets() {
                           <div className="flex-shrink-0 w-10 h-10">
                             <img
                               className="w-full h-full"
-                              src={cryptocurrency.ProductImage}
+                              src={cryptocurrency.image_url}
                               alt=""
                             />
                           </div>
                           <div className="ml-3">
                             <p className="text-gray-900 whitespace-no-wrap">
-                              {cryptocurrency.OrderItems}
+                              {cryptocurrency.name}
                             </p>
                           </div>
                         </div>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {cryptocurrency.Description}
+                          {cryptocurrency.description}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p className="text-gray-600 whitespace-no-wrap">
-                          {cryptocurrency.Location}
+                          {cryptocurrency.location}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white  text-sm">
@@ -108,12 +108,12 @@ function Assets() {
                             background: cryptocurrency.StatusBg,
                           }}
                         >
-                          {cryptocurrency.Status}
+                          {cryptocurrency.status}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p className="text-gray-600 whitespace-no-wrap">
-                          {cryptocurrency.ReleasedYear}
+                          {cryptocurrency.released_year}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -123,7 +123,7 @@ function Assets() {
                               className="text-white capitalize "
                               // onClick={()=> viewAsset}
                             >
-                              {cryptocurrency.link}
+                              View
                             </button>
                           </div>
                           <div className="ml-2 justify-center bg-blue-500 p-2 rounded-sm">
@@ -131,7 +131,7 @@ function Assets() {
                               className="text-white capitalize "
                               // onClick={()=> editAsset}
                             >
-                              {cryptocurrency.link1}
+                              Edit
                             </button>
                           </div>
                           <div className="ml-2 justify-center bg-red-500 p-2 rounded-sm">
@@ -139,7 +139,7 @@ function Assets() {
                               className="text-white capitalize"
                               // onClick={()=> deleteAsset}
                             >
-                              {cryptocurrency.link2}
+                             Delete
                             </button>
                           </div>
                         </div>
