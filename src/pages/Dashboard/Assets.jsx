@@ -9,14 +9,32 @@ import { Link } from 'react-router-dom';
 function Assets() {
   //
   const [assetItems, setAssetsItems] = useState([]);
-  console.log(assetItems)
+  console.log(assetItems);
 
   // GET Assets
-  useEffect(() => {
+  const getAssets = () => {
     fetch("https://aim-snb2.onrender.com/assets")
       .then((r) => r.json())
       .then((data) => setAssetsItems(data));
+  };
+  useEffect(() => {
+    getAssets();
+    // fetch("https://aim-snb2.onrender.com/assets")
+    //   .then((r) => r.json())
+    //   .then((data) => setAssetsItems(data));
   }, []);
+
+  // Delete Employee
+  const deleteAsset = (id) => {
+    fetch(`https://aim-snb2.onrender.com/assets/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      const deleteTheAsset = assetItems.filter((asset) => {
+        return asset.id !== id;
+      });
+      setAssetsItems(deleteTheAsset);
+    });
+  };
   //
   const [data, setData] = useState(ordersData);
   // pagination
@@ -48,7 +66,7 @@ function Assets() {
         {/* <Header title="Assets" description="All Our Assets" /> */}
         <div className="-mx-4  px-4  py-4 ">
           <div className="inline-block min-w-full shadow-md rounded-lg  ">
-            <Reorder.Group values={currentData} onReorder={setData}>
+            <Reorder.Group values={currentData} onReorder={setAssetsItems}>
               <table className="min-w-full overflow-hidden leading-normal">
                 <thead>
                   <tr>
@@ -119,27 +137,29 @@ function Assets() {
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <div className="flex">
                           <div className="flex-shrink-0 justify-center bg-green-500 p-2 rounded-sm">
-                            <button
+                            <Link
+                              to={`view/${cryptocurrency.id}`}
                               className="text-white capitalize "
                               // onClick={()=> viewAsset}
                             >
                               View
-                            </button>
+                            </Link>
                           </div>
                           <div className="ml-2 justify-center bg-blue-500 p-2 rounded-sm">
-                            <button
+                            <Link
+                              to={`edit/${cryptocurrency.id}`}
                               className="text-white capitalize "
                               // onClick={()=> editAsset}
                             >
                               Edit
-                            </button>
+                            </Link>
                           </div>
                           <div className="ml-2 justify-center bg-red-500 p-2 rounded-sm">
                             <button
                               className="text-white capitalize"
-                              // onClick={()=> deleteAsset}
+                              onClick={() => deleteAsset(cryptocurrency.id)}
                             >
-                             Delete
+                              Delete
                             </button>
                           </div>
                         </div>

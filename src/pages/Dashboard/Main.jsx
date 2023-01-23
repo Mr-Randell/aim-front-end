@@ -16,6 +16,9 @@ import BarChart from "../../components/dashboard/BarChart"
 import { login , selectUser } from "../../redux/features/userSlice";
 import { useSelector, useDispatch } from "react-redux";
 import Login from "../Login"
+import ViewAssets from "../../components/dashboard/ViewAssets";
+import EditAssets from "../../components/dashboard/EditAssets";
+
 
 function Main() {
   const { activeMenu } = useStateContext();
@@ -102,9 +105,9 @@ function Main() {
           }
         >
           <div className="fixed md:static navbar w-full ">
-            <TopNav 
+            <TopNav
             // currentuser={currentuser}
-             />
+            />
           </div>
           <div>
             <div>
@@ -113,22 +116,18 @@ function Main() {
                 <Route path="/dashboard" element={<DashBoard />} />
                 Data
                 <Route path="/assets" element={<Assets />} />
+                <Route path="/assets/view/:id" element={<ViewAssets />} />
+                <Route path="/assets/edit/:id" element={<EditAssets />} />
                 <Route path="/employees" element={<Employees />} />
                 Pages
                 {/* <Route path="/Profile-Form" element={<ProfileForm />} /> */}
                 <Route path="/asset-Form" element={<AddingAssets />} />
-                <Route
-                  path="/employee-form"
-                  element={<AddingEmployee />}
-                />
+                <Route path="/employee-form" element={<AddingEmployee />} />
                 <Route path="/Calendar" element={<CalendarDate />} />
                 <Route path="/FAQ" element={<Faq />} />
                 Locations
                 {/* <Route path="/bar" element={<BarChart />} /> */}
-                <Route
-                  path="/Geography-Chart"
-                  element={<GeographyChart />}
-                />
+                <Route path="/Geography-Chart" element={<GeographyChart />} />
               </Routes>
             </div>
           </div>
