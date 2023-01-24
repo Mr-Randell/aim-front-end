@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 function EditAssets() {
     const [name, setName] = useState("");
     const [location, setLocation] = useState("");
-    const [description, setdescription] = useState("");
+    const [description, setDescription] = useState("");
     const [image_url, setImageUrl] = useState("");
     const [price, setPrice] = useState("");
     const [released_year, setReleasedYear] = useState("");
@@ -26,7 +26,7 @@ function EditAssets() {
       fetch(`https://aim-snb2.onrender.com/assets/${id}`).then((res) => {
         setName(res.data.name);
         setLocation(res.data.location);
-        setdescription(res.data.description);
+        setDescription(res.data.description);
         setImageUrl(res.data.image_url);
         setPrice(res.data.price);
         setReleasedYear(res.data.released_year);
@@ -81,7 +81,7 @@ function EditAssets() {
         />
         <input
           type="number"
-          vvalue={released_year}
+          value={released_year}
           onChange={(e) => setReleasedYear(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
         />
