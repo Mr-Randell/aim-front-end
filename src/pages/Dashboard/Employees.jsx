@@ -110,7 +110,7 @@ const getEmployee =()=>{
                             <Link
                               to={`edit/${cryptocurrency.id}`}
                               className="text-white capitalize "
-                              // onClick={()=> editemployee}
+                              // onClick={()=> <EditEmployee />}
                             >
                               Edit
                             </Link>
