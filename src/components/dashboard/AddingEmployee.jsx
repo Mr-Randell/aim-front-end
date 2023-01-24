@@ -24,7 +24,6 @@ function AddingEmployee() {
     }).then(() => {
       console.log("new employee added");
     });
-    // e.target.reset()
     setName('')
     setLocation('')
     setJobTitle('')

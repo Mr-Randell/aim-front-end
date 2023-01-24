@@ -5,9 +5,7 @@ const Signup = () => {
   return (
     <div className="h-screen flex flex-col justify-center">
       <NavBar />
-      {/* <div className="flex border flex-col mb-4 text-2xl">Sign Up here</div> */}
       <div className="container mx-auto border-spacing-6 mt-20 md:h-flex ">
-        {/* md:transition md:ease-in-out md:delay-150 md:hover-translate-y-1 md:hover:scale-110 md:hover:md:shadow-2xl md:duration-300 ... */}
         <form className="flex flex-col m-10 ">
           <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
             <input
@@ -49,28 +47,8 @@ const Signup = () => {
             />
             <label for="email" className="absolute text-2xl font-semibold text-opacity-80 left-0 -top-2 bg-white p-0.5 transition-all peer-placeholder-shown:top-7 peer-placeholder-shown:font-normal mx-6 transition duration-200 input-text">Email</label>
           </div>
-          {/* <input
-            type="password"
-            className="border-0 border-b-2 p-4 placeholder:text-2xl placeholder-current mb-3 mx-2"
-            placeholder="Password"
-          /> */}
-          {/* <input
-            type="text"
-            className="border-0 border-b-2 p-4 placeholder:text-2xl placeholder-current mb-3 mx-2"
-            placeholder="Company Name"
-          /> */}
-          {/* <input
-            type="tel"
-            className="border-0 border-b-2 p-4 placeholder:text-2xl placeholder-current mb-3 mx-2"
-            placeholder="Phone Number"
-          /> */}
           <div className="flex mt-4">
             <div className="w-1/2 pr-2">
-              {/* <input
-                type="text"
-                className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 mx-2 w-11/12"
-                placeholder="Country"
-              /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
                   id="country"
@@ -83,11 +61,6 @@ const Signup = () => {
               </div>
             </div>
             <div className="w-1/2 pl-2">
-              {/* <input
-                type="text"
-                className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 mx-2 w-11/12"
-                placeholder="Language"
-              /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
                   id="role"
@@ -102,11 +75,6 @@ const Signup = () => {
           </div>
           <div className="flex mt-4">
             <div className="hidden md:block w-1/2 pr-2">
-              {/* <input
-                type="text"
-                className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 mx-2 w-11/12"
-                placeholder="Company Size"
-              /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
                   id="company_size"
@@ -119,11 +87,6 @@ const Signup = () => {
               </div>
             </div>
             <div className="md:hidden sm:block w-1/2 pl-2">
-              {/* <input
-                type="text"
-                className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 mx-2 w-11/12"
-                placeholder="Interests"
-              /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
                   id="company_size"
@@ -136,11 +99,6 @@ const Signup = () => {
               </div>
             </div>
             <div className="hidden md:block w-1/2 pl-2">
-              {/* <input
-                type="text"
-                className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 mx-2 w-11/12"
-                placeholder="Primary Interest"
-              /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
                   id="industry"
@@ -153,11 +111,6 @@ const Signup = () => {
               </div>
             </div>
             <div className="md:hidden sm:block w-1/2 pl-2">
-              {/* <input
-                type="text"
-                className="border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 mx-2 w-11/12"
-                placeholder="Interests"
-              /> */}
               <div className="relative border-0 border-b-2 p-3 placeholder:text-2xl placeholder-current mb-3 px-2">
                 <input
                   id="interests"

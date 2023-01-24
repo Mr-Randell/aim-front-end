@@ -2,15 +2,13 @@ import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 import { userProfileData } from '../../data';
 import { useStateContext } from '../../contexts/ContextProvider';
-import avatar from "../../assets/myself.jpeg";
 import {FaUserCircle} from "react-icons/fa"
-// 
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/features/userSlice";
 import { useNavigate } from "react-router-dom";
 
 const UserProfile = (
-  // { currentuser}
+  { currentuser}
   ) => {
 
   const navigate = useNavigate();
@@ -44,13 +42,13 @@ const UserProfile = (
         <FaUserCircle className="rounded-full h-24 w-24" />
         <div>
           <p className="font-semibold text-xl dark:text-gray-500">
-            {/* {currentuser.username} */}
+            {currentuser.username}
           </p>
           <p className="text-gray-500 text-sm dark:text-gray-400">
-            {/* {currentuser.role} */}
+            {currentuser.role}
           </p>
           <p className="text-gray-500 text-sm font-semibold dark:text-gray-400">
-            {/* {currentuser.email} */}
+            {currentuser.email}
           </p>
         </div>
       </div>

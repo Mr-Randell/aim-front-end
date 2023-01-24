@@ -28,7 +28,6 @@ function AddingAssets() {
     }).then(() => {
       console.log("new employee added");
     });
-    // e.target.reset()
     setName("");
     setLocation("");
     setdescription("");

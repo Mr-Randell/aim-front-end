@@ -22,19 +22,19 @@ import EditAssets from "../../components/dashboard/EditAssets";
 
 function Main() {
   const { activeMenu } = useStateContext();
-  // const currentuser = useSelector(selectUser);
-  // const dispatch = useDispatch();
+  const currentuser = useSelector(selectUser);
+  const dispatch = useDispatch();
 
-  // console.log(currentuser);
+  console.log(currentuser);
 
   // GET /me
-  // useEffect(() => {
-  //   fetch("/me").then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((user) =>dispatch(login(user)));
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) =>dispatch(login(user)));
+      }
+    });
+  }, []);
 
   // if(currentuser){
   //   return (
@@ -106,7 +106,7 @@ function Main() {
         >
           <div className="fixed md:static navbar w-full ">
             <TopNav
-            // currentuser={currentuser}
+            currentuser={currentuser}
             />
           </div>
           <div>

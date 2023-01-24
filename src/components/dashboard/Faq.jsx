@@ -32,7 +32,6 @@ function Faq() {
       <section id="trivia" className="px-2 pt-10">
         <h2 className="text-center pt-4">
           <Header
-            // className="text-center"
             title="FAQ"
             description="Frequently Asked Questions Page"
           />

@@ -90,7 +90,7 @@ function EditAssets() {
           type="submit"
           onClick={Update}
         >
-          UPDATE asset
+          UPDATE ASSET
         </button>
       </form>
     </div>

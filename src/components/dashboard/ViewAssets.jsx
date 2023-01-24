@@ -17,17 +17,6 @@ function ViewAssets() {
         <div className="h-full w-full flex flex-col  justify-center items-center">
           {view && (
             <div className=" justify-center items-center">
-              {/* <div className="w-5/12 flex flex-col space-y-4">
-                <h2 className="text-black font-bold text-3xl border-black border-b-2">
-                  Name
-                </h2>
-                <h2 className="text-white font-bold text-3xl border-black border-b-2">
-                  Image
-                </h2>
-                <h2 className="text-white font-bold text-3xl border-black border-b-2">
-                  Description
-                </h2>
-              </div> */}
               <div className="w-7/12 flex flex-col space-y-4  ">
                 <div className="flex-shrink-0 w-30 h-30">
                   <img src={view.image_url} alt="" className="w-full h-full" />

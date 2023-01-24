@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Header from "../../components/dashboard/Header";
-import { ordersData } from "../../data";
 import { Reorder } from "framer-motion";
 import Pagination from './Pagination';
 import { Link } from 'react-router-dom';
@@ -19,9 +18,6 @@ function Assets() {
   };
   useEffect(() => {
     getAssets();
-    // fetch("https://aim-snb2.onrender.com/assets")
-    //   .then((r) => r.json())
-    //   .then((data) => setAssetsItems(data));
   }, []);
 
   // Delete Employee
@@ -35,11 +31,9 @@ function Assets() {
       setAssetsItems(deleteTheAsset);
     });
   };
-  //
-  const [data, setData] = useState(ordersData);
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const [dataPerPage] = useState(7);
+  const [dataPerPage] = useState(4);
 
   // Get current data
   const indexOfLastPost = currentPage * dataPerPage;
@@ -140,7 +134,6 @@ function Assets() {
                             <Link
                               to={`view/${cryptocurrency.id}`}
                               className="text-white capitalize "
-                              // onClick={()=> viewAsset}
                             >
                               View
                             </Link>
@@ -149,7 +142,6 @@ function Assets() {
                             <Link
                               to={`edit/${cryptocurrency.id}`}
                               className="text-white capitalize "
-                              // onClick={()=> editAsset}
                             >
                               Edit
                             </Link>
@@ -170,7 +162,7 @@ function Assets() {
               </table>
               <Pagination
                 dataPerPage={dataPerPage}
-                totalPosts={data.length}
+                totalPosts={assetItems.length}
                 paginate={paginate}
               />
             </Reorder.Group>
