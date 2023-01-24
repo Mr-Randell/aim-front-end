@@ -4,3 +4,5 @@
 
 ## Focus 🎯
 Building a ASSETS INVENTORY MANAGEMENT APP frontend that utilizes a Ruby on Rails API to access and persist data in a database.
+
+## Deployed frontend via link:
