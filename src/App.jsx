@@ -6,7 +6,9 @@ import {NavBar} from "./components";
 // import { Signup } from './components/Signup';
 // import UserInventoryForm from './components/UserInventoryForm';
 import { Footer } from "./components";
-import { Overview, Signup, Login, Dashboard, Main } from "./pages";
+import { Overview, Signup, Login, 
+  // Dashboard, 
+  Main } from "./pages";
 
 function App() {
   const [count, setCount] = useState(0)

@@ -10,7 +10,7 @@ function FooterLinks() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    fetch("https://libretranslate.de/languages")
+    fetch("https://libretranslate.com/languages")
       .then((res) => res.json())
       .then((data) => setLanguage(data));
   }, []);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from "../../components/dashboard/Header";
 import { ordersData } from "../../data";
 import { Reorder } from "framer-motion";
@@ -7,6 +7,35 @@ import { Link } from 'react-router-dom';
 
 
 function Assets() {
+  //
+  const [assetItems, setAssetsItems] = useState([]);
+  console.log(assetItems);
+
+  // GET Assets
+  const getAssets = () => {
+    fetch("https://aim-snb2.onrender.com/assets")
+      .then((r) => r.json())
+      .then((data) => setAssetsItems(data));
+  };
+  useEffect(() => {
+    getAssets();
+    // fetch("https://aim-snb2.onrender.com/assets")
+    //   .then((r) => r.json())
+    //   .then((data) => setAssetsItems(data));
+  }, []);
+
+  // Delete Employee
+  const deleteAsset = (id) => {
+    fetch(`https://aim-snb2.onrender.com/assets/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      const deleteTheAsset = assetItems.filter((asset) => {
+        return asset.id !== id;
+      });
+      setAssetsItems(deleteTheAsset);
+    });
+  };
+  //
   const [data, setData] = useState(ordersData);
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,7 +44,7 @@ function Assets() {
   // Get current data
   const indexOfLastPost = currentPage * dataPerPage;
   const indexOfFirstPost = indexOfLastPost - dataPerPage;
-  const currentData = data.slice(indexOfFirstPost, indexOfLastPost);
+  const currentData = assetItems.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -37,7 +66,7 @@ function Assets() {
         {/* <Header title="Assets" description="All Our Assets" /> */}
         <div className="-mx-4  px-4  py-4 ">
           <div className="inline-block min-w-full shadow-md rounded-lg  ">
-            <Reorder.Group values={currentData} onReorder={setData}>
+            <Reorder.Group values={currentData} onReorder={setAssetsItems}>
               <table className="min-w-full overflow-hidden leading-normal">
                 <thead>
                   <tr>
@@ -69,25 +98,25 @@ function Assets() {
                           <div className="flex-shrink-0 w-10 h-10">
                             <img
                               className="w-full h-full"
-                              src={cryptocurrency.ProductImage}
+                              src={cryptocurrency.image_url}
                               alt=""
                             />
                           </div>
                           <div className="ml-3">
                             <p className="text-gray-900 whitespace-no-wrap">
-                              {cryptocurrency.OrderItems}
+                              {cryptocurrency.name}
                             </p>
                           </div>
                         </div>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {cryptocurrency.Description}
+                          {cryptocurrency.description}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p className="text-gray-600 whitespace-no-wrap">
-                          {cryptocurrency.Location}
+                          {cryptocurrency.location}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white  text-sm">
@@ -97,38 +126,40 @@ function Assets() {
                             background: cryptocurrency.StatusBg,
                           }}
                         >
-                          {cryptocurrency.Status}
+                          {cryptocurrency.status}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p className="text-gray-600 whitespace-no-wrap">
-                          {cryptocurrency.ReleasedYear}
+                          {cryptocurrency.released_year}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <div className="flex">
                           <div className="flex-shrink-0 justify-center bg-green-500 p-2 rounded-sm">
-                            <button
+                            <Link
+                              to={`view/${cryptocurrency.id}`}
                               className="text-white capitalize "
                               // onClick={()=> viewAsset}
                             >
-                              {cryptocurrency.link}
-                            </button>
+                              View
+                            </Link>
                           </div>
                           <div className="ml-2 justify-center bg-blue-500 p-2 rounded-sm">
-                            <button
+                            <Link
+                              to={`edit/${cryptocurrency.id}`}
                               className="text-white capitalize "
                               // onClick={()=> editAsset}
                             >
-                              {cryptocurrency.link1}
-                            </button>
+                              Edit
+                            </Link>
                           </div>
                           <div className="ml-2 justify-center bg-red-500 p-2 rounded-sm">
                             <button
                               className="text-white capitalize"
-                              // onClick={()=> deleteAsset}
+                              onClick={() => deleteAsset(cryptocurrency.id)}
                             >
-                              {cryptocurrency.link2}
+                              Delete
                             </button>
                           </div>
                         </div>
