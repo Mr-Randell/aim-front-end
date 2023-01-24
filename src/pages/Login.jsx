@@ -160,7 +160,7 @@ const Login = () => {
                       className="text-white font-bold text-2xl py-4 w-full mt-3 md:bg-green-700 md:hover:bg-green-600 sm:bg-green-600"
                       type="submit"
                     >
-                      Login
+                      <Link to="/dashboard">Login</Link>
                     </button>
                     {/* </Link> */}
                   </div>
