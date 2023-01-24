@@ -9,7 +9,7 @@ import axios from "../API/axios"
 const LOGIN_URL= "/login"
 import Main from "./Dashboard/Main"
 import Assets from "./Dashboard/Assets";
-import {loginPic} from "../assets/undraw_login.svg"
+import loginPic from "../assets/undraw_login.svg"
 
 const Login = () => {
   const {setAuth} = useContext(AuthContext)
