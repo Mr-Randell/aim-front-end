@@ -9,7 +9,7 @@ import axios from "../API/axios"
 const LOGIN_URL= "/login"
 import Main from "./Dashboard/Main"
 import Assets from "./Dashboard/Assets";
-import {loginPic} from "../assets/undraw_login.svg"
+import loginPic from "../assets/undraw_login.svg"
 
 const Login = () => {
   const {setAuth} = useContext(AuthContext)
@@ -155,12 +155,14 @@ const Login = () => {
                         Password
                       </label>
                     </div>
-                    <button
-                      className="text-white font-bold text-2xl py-4 w-full mt-3 md:bg-green-700 md:hover:bg-green-600 sm:bg-green-600"
-                      type="submit"
-                    >
-                      Login
-                    </button>
+                    <Link to="/dashboard">
+                      <button
+                        className="text-white font-bold text-2xl py-4 w-full mt-3 md:bg-green-700 md:hover:bg-green-600 sm:bg-green-600"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </form>
